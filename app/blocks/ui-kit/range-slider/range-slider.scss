@@ -1,0 +1,60 @@
+@import "../ui-kit";
+.range-slider {
+  width: 266px;
+  &__label {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dark;
+  }
+}
+// Диапазон цен
+.irs-with-grid .irs-grid, .irs-min, .irs-max {
+  display: none;
+}
+.irs--flat .irs-line {
+  top: 23px;
+  height: 6px;
+  background: #fff;
+  border: 1px solid $dark25;
+  border-radius: 3px;
+}
+.irs--flat .irs-handle {
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  i:first-child {
+    display: none;
+  }
+}
+.irs--flat .irs-bar {
+  top: 23px;
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+}
+.irs--flat .irs-single, .irs--flat .irs-from, .irs--flat .irs-to {
+  top: -20px;
+  left: 100%!important;
+  transform: translateX(-100%);
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 400;
+  color: $dark50;
+  font-family: 'montserrat';
+  background: none;
+  &:before {
+    display: none;
+  }
+}
+.irs--flat .irs-from, .irs--flat .irs-to {
+  visibility: hidden!important;
+}
+.irs--flat .irs-single {
+  visibility: visible!important;
+}
+// Диапазон цен
