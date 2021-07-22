@@ -1,0 +1,4 @@
+mixin maskedTextField(label, name, placeholder)
+  .masked-text-field 
+    label.masked-text-field__label(for=name)= label
+    input.masked-text-field__input(type="text" id=name placeholder=placeholder)

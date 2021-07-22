@@ -1,0 +1,33 @@
+$dark: $textcolor;
+$dark75: rgba($dark, 0.75);
+$dark50: rgba($dark, 0.50);
+$dark25: rgba($dark, 0.25);
+$dark5: rgba($dark, 0.5);
+$purple: $accent;
+$green: #6fcf97;
+
+h1 {
+  font-size: 24px;
+  line-height: 29px;
+  color: $dark;
+  font-weight: 700;
+}
+h2 {
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 700;
+  color: $dark;
+}
+h3 {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $dark;
+}
+body {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $dark75;
+}

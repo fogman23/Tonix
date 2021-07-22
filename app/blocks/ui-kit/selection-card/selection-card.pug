@@ -1,0 +1,10 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../buttons/buttons
+.selection-card
+  h1.selection-card__title Найдём номера под ваши пожелания
+  .selection-card__dropdownDates
+    +dateDropdown("прибытие","firstDate", "ДД.ММ.ГГГГ")
+    +dateDropdown("выезд","lastDate", "29.07.2021")
+  +dropdown("гости","countPeople")
+  +btn("подобрать номер")

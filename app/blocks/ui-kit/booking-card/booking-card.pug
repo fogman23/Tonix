@@ -1,0 +1,28 @@
+include ../date-dropdown/date-dropdown
+include ../dropdown/dropdown
+include ../buttons/buttons
+
+mixin serviceItem(title, price, info)
+  .services-item
+    span.services-item__title= title
+    if info == true 
+      .services-item__info i
+    span.services-item__price= price
+
+.booking-card 
+  .booking-card__top 
+    span.booking-card__title <span>№ </span>888
+    span.booking-card__class Люкс
+    span.booking-card__price 9 990₽ <span>в сутки</span>
+  .booking-card__dropdownDates
+    +dateDropdown("прибытие","firstDate")
+    +dateDropdown("выезд","lastDate")
+  +dropdown("гости","countPeople")
+  .booking-card__list-services
+    +serviceItem("9 990₽ х 4 суток", "39 960₽", false)
+    +serviceItem("Сбор за услуги: скидка 2 179₽", "0₽", true)
+    +serviceItem("Сбор за дополнительные услуги", "300₽", true)
+  .booking-card__total.total 
+    span.total__title Итого
+    span.total__price 111 111₽
+  +btn("забронировать")

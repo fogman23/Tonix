@@ -1,0 +1,46 @@
+@import "../ui-kit";
+
+.toggle {
+  &__input {
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+    &:checked+.toggle__label:before {
+      border-color: $purple;
+    }
+    &:checked+.toggle__label:after {
+      left: 24px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    min-width: 100px;
+    line-height: 18px;
+    &:before {
+      content: '';
+      display: inline-block;
+      flex: 0 0 40px;
+      height: 20px;
+      border: 1px solid $dark25;
+      border-radius: 10px;
+      margin-right: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 100%;
+      background: $dark25;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}

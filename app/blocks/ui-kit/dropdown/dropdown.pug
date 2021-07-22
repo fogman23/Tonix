@@ -1,0 +1,6 @@
+mixin dropdown(label, name)
+  .dropdown
+    label.dropdown__label(for=name)= label
+    select.dropdown__select(id=name)
+      option Сколько гостей
+    i.material-icons.dropdown__arrow expand_more

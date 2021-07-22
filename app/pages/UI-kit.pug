@@ -1,0 +1,76 @@
+include ../blocks/ui-kit/text-field/text-field
+include ../blocks/ui-kit/masked-text-field/masked-text-field
+include ../blocks/ui-kit/dropdown/dropdown
+include ../blocks/ui-kit/date-dropdown/date-dropdown
+include ../blocks/ui-kit/filter-date-dropdown/filter-date-dropdown
+include ../blocks/ui-kit/subscription-text-field/subscription-text-field
+include ../blocks/ui-kit/checkbox/checkbox
+include ../blocks/ui-kit/radio/radio
+include ../blocks/ui-kit/toggle/toggle
+include ../blocks/ui-kit/like/like
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="css/main.min.css")
+    title UI kit
+  body 
+    h1 Colors & Type
+    br
+    h1 This one is the sub-section or widget title
+    h2 Next one is the item title inside widgets
+    h3 This is a label or CTA text
+    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nam temporibus perferendis animi dignissimos vitae eius sapiente at. Odit nesciunt rerum dolores culpa! Aut modi delectus corporis a maiores!
+    br
+    h1 Form Elements 
+    br
+    +textField("text field", "name", "Name")
+    br
+    br
+    +dropdown("dropdown","countPeople")
+    br
+    br
+    +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
+    br
+    br
+    +dateDropdown("date dropdown","firstDate", "ДД.ММ.ГГГГ")
+    +dateDropdown("date dropdown","lastDate", "29.07.2021")
+    br
+    br
+    +filterDateDropdown("filter date dropdown", "filterDate")
+    br
+    br
+    +subscriptionTextField("subscription text field", "subscribe", "Email")
+    br
+    br
+    h3 checkbox buttons 
+    br
+    +checkbox("Можно курить", "smoke")
+    br
+    +checkbox("Можно с питомцами", "pets")
+    br
+    +checkbox("Можно пригласить гостей (до 10 человек)", "party")
+    br
+    h3 ratio buttons
+    br
+    +radio("Мужчина", "radio", 'man', "r1")
+    +radio("Женщина", "radio", "women", "r2")
+    br
+    br
+    h3 toggle 
+    br
+    +toggle("Получить спецпедложение", "bonus")
+    br
+    h3 like button
+    br
+    +like("like", "12")
+    br
+    br
+    include ../blocks/ui-kit/rate/rate
+    br
+    include ../blocks/ui-kit/selection-card/selection-card
+    br
+    include ../blocks/ui-kit/booking-card/booking-card
+    br

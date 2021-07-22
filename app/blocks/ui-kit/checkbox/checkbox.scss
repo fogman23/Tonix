@@ -1,0 +1,49 @@
+@import "../ui-kit";
+
+.checkbox {
+  &__input {
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+    &:checked+.checkbox__label:before {
+      border-color: $purple;
+    }
+    &:checked+.checkbox__label:after {
+      opacity: 1;
+    }
+  }
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    width: 222px;
+    line-height: 18px;
+    &:before {
+      content: '';
+      display: inline-block;
+      flex: 0 0 20px;
+      height: 20px;
+      border: 1px solid $dark25;
+      border-radius: 4px;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      left: 6px;
+      top: 6px;
+      display: inline-block;
+      width: 8px;
+      height: 6px;
+      border-left: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      transform: rotate(-45deg);
+      border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%, transparent 30%);
+      border-image-slice: 1;
+      transition: all 0.3s ease;
+    }
+  }
+}

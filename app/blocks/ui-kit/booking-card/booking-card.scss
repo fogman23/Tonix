@@ -1,0 +1,110 @@
+@import "../ui-kit";
+.booking-card {
+  width: 380px;
+  height: 512px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px 30px 30px 30px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 26px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $dark;
+    span {
+      font-size: 14px;
+    }
+  }
+  &__class {
+    flex: 1 1;
+    margin-left: 8px;
+    font-size: 12px;
+    color: $purple;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__price {
+    font-size: 14px;
+    font-weight: 700;
+    color: $dark50;
+    span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+  &__dropdownDates {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .dropdown {
+    margin-top: 20px;
+  }
+  &__list-services {
+    margin-top: 20px;
+    .services-item {
+      display: flex;
+      justify-content: space-between;
+      line-height: 18px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &__title {
+        width: 214px;
+      }
+      &__price {
+        flex: 1 1;
+        text-align: right;
+      }
+      &__info {
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        color: $dark25;
+        font-weight: 700;
+        border-radius: 100%;
+        border: 1px solid $dark25
+      }
+    }
+  }
+  &__total {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    &__title, &__price {
+      z-index: 1;
+      position: relative;
+      font-size: 19px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $dark;
+      background-color: #fff;
+    }
+    &__title::after {
+      z-index: 2;
+      bottom: 4px;
+      left: 64px;
+      position: absolute;
+      display: block;
+      content: '';
+      width: 300px;
+      height: 1px;
+      border-bottom: 1px dashed $dark25
+    }
+  } 
+}
