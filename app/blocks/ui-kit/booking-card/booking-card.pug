@@ -17,7 +17,7 @@ mixin serviceItem(title, price, info)
   .booking-card__dropdownDates
     +dateDropdown("прибытие","firstDate")
     +dateDropdown("выезд","lastDate")
-  +dropdown("гости","countPeople")
+  +dropdownPeople("гости")
   .booking-card__list-services
     +serviceItem("9 990₽ х 4 суток", "39 960₽", false)
     +serviceItem("Сбор за услуги: скидка 2 179₽", "0₽", true)
@@ -25,4 +25,4 @@ mixin serviceItem(title, price, info)
   .booking-card__total.total 
     span.total__title Итого
     span.total__price 111 111₽
-  +btn("забронировать")
+  +btnBig("забронировать")

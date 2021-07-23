@@ -1,0 +1,55 @@
+@import "../ui-kit.scss";
+.pagination {
+  width: 241px;
+  height: 75px;
+  color: $dark50;
+  &__list {
+    padding: 0;
+    margin-bottom: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    &_active {
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      border-radius: 22px;
+      .pagination__link {
+        font-weight: 700;
+        color: #fff;
+        &:hover, &:focus {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__separator {
+    cursor: pointer;
+  }
+  &__next {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    i {
+      font-size: 24px;
+      line-height: 21;
+      color: #fff;
+    }
+  }
+  &__link {
+    color: $dark50;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: $purple;
+      font-weight: 700;
+    }
+  }
+  &__info {
+    text-align: center;
+  }
+}

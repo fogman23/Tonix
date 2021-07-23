@@ -1,4 +1,14 @@
-mixin btn(title)
-  button.btn.btn_with_arrow
+- var disabled = false;
+mixin btnBig(title)
+  button.btn.btn_big
     span= title
     i.material-icons arrow_forward
+
+mixin btnSmall(title, disabled)
+  button(disabled=disabled).btn.btn_small= title
+
+mixin btnSmallBorder(title, disabled)
+  button(disabled=disabled).btn.btn_small.btn_border= title
+
+mixin btnText(title, id, disabled)
+  button(disabled=disabled, id=id).btn.btn_text= title

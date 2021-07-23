@@ -1,6 +1,32 @@
-mixin dropdown(label, name)
+include ../buttons/buttons
+mixin dropdown(label)
   .dropdown
-    label.dropdown__label(for=name)= label
-    select.dropdown__select(id=name)
-      option Сколько гостей
+    .dropdown__label= label
+    .dropdown__select 2 спальни, 2 кровати...
     i.material-icons.dropdown__arrow expand_more
+
+mixin dropdownPeople(label)
+  .dropdown.dropdown-people
+    .dropdown__label= label
+    .dropdown__select сколько гостей
+    i.material-icons.dropdown__arrow expand_more
+    .dropdown__body 
+      ul.dropdown__list
+        li.dropdown__item 
+          span.dropdown__item-title взрослые
+          button.btn-minus -
+          span.dropdown__item-count 0
+          button.btn-plus +
+        li.dropdown__item 
+          span.dropdown__item-title дети
+          button.btn-minus -
+          span.dropdown__item-count 0
+          button.btn-plus +
+        li.dropdown__item 
+          span.dropdown__item-title младенцы
+          button.btn-minus -
+          span.dropdown__item-count 0
+          button.btn-plus +
+      .dropdown__buttons 
+        +btnText("Применить", "apply")
+        +btnText("Очистить", "clear")

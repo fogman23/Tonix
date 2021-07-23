@@ -9,6 +9,8 @@ include ../blocks/ui-kit/radio/radio
 include ../blocks/ui-kit/toggle/toggle
 include ../blocks/ui-kit/like/like
 include ../blocks/ui-kit/range-slider/range-slider
+include ../blocks/ui-kit/buttons/buttons
+
 
 include ../blocks/header/header.pug
 block content 
@@ -24,7 +26,7 @@ block content
   +textField("text field", "name", "Name")
   br
   br
-  +dropdown("dropdown","countPeople")
+  +dropdownPeople("dropdown")
   br
   br
   +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
@@ -65,8 +67,30 @@ block content
   br
   include ../blocks/ui-kit/rate/rate
   br
-  +rangeSlider("Range Slider", "rangePrice")
-
+  +rangeSlider("Range Slider", "rangePrice", "rangePriceValue")
+  br
+  h3 buttons
+  br
+  
+  +btnSmall("Click me")
+  +btnSmall("Click me", true)
+  br
+  br
+  +btnSmallBorder("Click me")
+  +btnSmallBorder("Click me", true)
+  br
+  br
+  +btnText("Click me")
+  +btnText("Click me", true)
+  br
+  br
+  +btnBig("Перейти к оплате")
+  br
+  br
+  h3 pagination
+  include ../blocks/ui-kit/pagination/pagination
+  br
+  br
   include ../blocks/ui-kit/selection-card/selection-card
   br
   include ../blocks/ui-kit/booking-card/booking-card
