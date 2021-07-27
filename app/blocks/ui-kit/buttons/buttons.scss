@@ -32,22 +32,24 @@ button.btn {
     }
   }
   &_border {
-    padding: 13px 0px;
-    margin: 2px;
+    position: relative;
+    border: 2px solid transparent;
+    border-radius: 22px;
     width: 95px;
     height: 40px;
-    position: relative;
-    background: #fff;
+    padding: 12px 0;
+    margin: 2px;
     color: $purple;
+    background: #fff;
     &:before {
-      content: "";
+      content: '';
+      z-index: -1;
       border-radius: 22px;
       position: absolute;
-      z-index: -1;
-      top: -2px;
-      left: -2px;
-      bottom: -2px;
-      right: -2px;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
     &:disabled {

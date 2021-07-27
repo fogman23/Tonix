@@ -1,0 +1,11 @@
+include ../checkbox/checkbox
+mixin checkboxList(title)
+  .checkbox-list
+    .checkbox-list__title= title
+    .checkbox-list__body 
+      +checkbox("Завтрак", "breakfast")
+      +checkbox("Письменный стол", "desk")
+      +checkbox("Стул для кормления", "feeding-chair")
+      +checkbox("Кроватка", "crib")
+      +checkbox("Телевизор", "television")
+      +checkbox("Шампунь", "shampoo")

@@ -1,6 +1,9 @@
-mixin dateDropdown(label, name, placeholder)
+mixin dateDropdown(from, to)
   .date-dropdown
-    label.date-dropdown__label(for=name)= label
-    input.date-dropdown__input(type="text" id=name placeholder=placeholder)
-    i.material-icons.date-dropdown__arrow expand_more
+    .date-dropdown__select 
+      label.date-dropdown__label(for="start")= from
+      input.date-dropdown__input(type="text" id="start" placeholder="ДД.ММ.ГГ")
+    .date-dropdown__select
+      label.date-dropdown__label(for="end")= to
+      input.date-dropdown__input(type="text" id="end" placeholder="ДД.ММ.ГГ")
 

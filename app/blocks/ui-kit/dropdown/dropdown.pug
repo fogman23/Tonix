@@ -1,15 +1,30 @@
 include ../buttons/buttons
-mixin dropdown(label)
-  .dropdown
+mixin dropdownRooms(label, id)
+  div(id=id).dropdown
     .dropdown__label= label
     .dropdown__select 2 спальни, 2 кровати...
-    i.material-icons.dropdown__arrow expand_more
+    .dropdown__body 
+      ul.dropdown__list
+        li.dropdown__item 
+          span.dropdown__item-title спальни
+          button.btn-minus -
+          span.dropdown__item-count 2
+          button.btn-plus +
+        li.dropdown__item 
+          span.dropdown__item-title кровати
+          button.btn-minus -
+          span.dropdown__item-count 2
+          button.btn-plus +
+        li.dropdown__item 
+          span.dropdown__item-title ванные комнаты
+          button.btn-minus -
+          span.dropdown__item-count 0
+          button.btn-plus +
 
-mixin dropdownPeople(label)
-  .dropdown.dropdown-people
+mixin dropdownPeople(label, id)
+  div(id=id).dropdown
     .dropdown__label= label
     .dropdown__select сколько гостей
-    i.material-icons.dropdown__arrow expand_more
     .dropdown__body 
       ul.dropdown__list
         li.dropdown__item 
@@ -28,5 +43,5 @@ mixin dropdownPeople(label)
           span.dropdown__item-count 0
           button.btn-plus +
       .dropdown__buttons 
-        +btnText("Применить", "apply")
-        +btnText("Очистить", "clear")
+        +btnText("Применить")
+        +btnText("Очистить")

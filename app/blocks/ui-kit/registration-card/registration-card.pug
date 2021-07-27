@@ -1,0 +1,21 @@
+include ../text-field/text-field
+include ../radio/radio
+include ../toggle/toggle
+include ../buttons/buttons
+
+.registration-card 
+  h1.registration-card__title Регистрация аккаунта
+  form.form-registration 
+    +textFieldNoLabel("name", "Имя")
+    +textFieldNoLabel("surname", "Фамилия")
+    +radio("Мужчина", "s", "man", "Мужчина")
+    +radio("Женщина", "s", "women", "Женщина")
+    +maskedTextField("дата рождения", "birthday", "ДД.ММ.ГГГГ")
+    +textField("данные для входа в сервис", "email", "Email")
+    +textFieldNoLabel("password", "Пароль")
+    +toggle("Получать спецпредложения", "specoffers")
+    +btnBig("Перейти к оплате")
+  .registration-card__bottom 
+    span Уже есть аккаунт на Toxin
+    +btnSmallBorder("Войти")
+    

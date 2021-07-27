@@ -1,0 +1,22 @@
+.rich-checkbox-list {
+  position: relative;
+  width: 266px;
+  background-color: #fff;
+  &__title {
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__body {
+    margin-top: 16px;
+    width: 100%;
+    background-color: #fff;
+    .checkbox-rich:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+  

@@ -2,3 +2,9 @@ mixin checkbox(label, name)
   .checkbox
     input(type="checkbox" id=name).checkbox__input
     label(for=name).checkbox__label= label 
+      
+mixin richCheckbox(label, name, text)
+  .checkbox-rich
+    input(type="checkbox" id=name).checkbox-rich__input
+    label(for=name).checkbox-rich__label= label 
+    .checkbox-rich__text= text

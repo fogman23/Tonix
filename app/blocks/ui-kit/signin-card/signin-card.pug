@@ -1,0 +1,12 @@
+include ../text-field/text-field
+include ../buttons/buttons
+
+.signin-card 
+  h1.signin-card__title Войти
+  form.signin-form
+    +textFieldNoLabel("email", "Email")
+    +textFieldNoLabel("password", "Пароль")
+    +btnBig("Войти")
+  .signin-card__bottom 
+    span Нет аккаунта на Toxin?
+    +btnSmallBorder("Создать")

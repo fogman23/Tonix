@@ -2,3 +2,12 @@ mixin textField(label, name, placeholder)
   .text-field 
     label.text-field__label(for=name)= label
     input.text-field__input(type="text" id=name placeholder=placeholder)
+
+mixin textFieldNoLabel(name, placeholder)
+  .text-field 
+    input.text-field__input(type="text" id=name placeholder=placeholder)
+
+mixin maskedTextField(label, name, placeholder)
+  .text-field.text-field_masked 
+    label.text-field__label(for=name)= label
+    input.text-field__input(type="text" id=name placeholder=placeholder)

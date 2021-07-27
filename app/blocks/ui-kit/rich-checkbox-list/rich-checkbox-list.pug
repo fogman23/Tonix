@@ -1,0 +1,7 @@
+include ../checkbox/checkbox
+mixin richCheckboxList(title)
+  .rich-checkbox-list
+    .rich-checkbox-list__title= title
+    .rich-checkbox-list__body 
+      +richCheckbox("Широкий коридор", "ggg", "Ширина коридоров в номере не менее 91 см.")
+      +richCheckbox("Помощник для инвалидов", "rrr", "На 1 этаже вас встретит специалист  и проводит до номера.")

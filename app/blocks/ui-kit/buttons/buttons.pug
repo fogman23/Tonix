@@ -1,4 +1,5 @@
 - var disabled = false;
+
 mixin btnBig(title)
   button.btn.btn_big
     span= title
@@ -10,5 +11,5 @@ mixin btnSmall(title, disabled)
 mixin btnSmallBorder(title, disabled)
   button(disabled=disabled).btn.btn_small.btn_border= title
 
-mixin btnText(title, id, disabled)
-  button(disabled=disabled, id=id).btn.btn_text= title
+mixin btnText(title, disabled)
+  button(disabled=disabled).btn.btn_text= title
