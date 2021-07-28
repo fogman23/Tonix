@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
-mixin checkboxList(title)
-  .checkbox-list
+mixin checkboxList(title, id)
+  .checkbox-list(id=id)
     .checkbox-list__title= title
     .checkbox-list__body 
       +checkbox("Завтрак", "breakfast")

@@ -1,8 +1,7 @@
-const dateDropdown = (elem) => {
+const filterDateDropdown = (elem) => {
 
   let Datepicker = $(elem),
-    start = Datepicker.find("[data-action=start]"),
-    end = Datepicker.find("[data-action=end]"),
+    date = Datepicker.find("[data-action=date]"),
     myDatepicker = Datepicker.datepicker().data('datepicker')
 
   Datepicker.find(".datepicker").append("<div class='buttons'></div>")
@@ -12,20 +11,18 @@ const dateDropdown = (elem) => {
     inline: true,
     range: true,
     minDate: new Date(),
+    dateFormat: "dd M",
+    multipleDatesSeparator: " - ",
     navTitles: {
       days: 'MM yyyy',
       months: 'yyyy',
       years: 'yyyy1 - yyyy2'
     },
     onSelect: function (fd, d, picker) {
-      start.text(fd.split(",")[0])
-      end.text(fd.split(",")[1])
+      date.text(fd.toLowerCase())
     }
   })
-  start.click(function() {
-    Datepicker.find(".datepicker-inline").slideDown(400)
-  })
-  end.click(function() {
+  date.click(function() {
     Datepicker.find(".datepicker-inline").slideDown(400)
   })
   $(document).mouseup(function (e) {
@@ -39,12 +36,11 @@ const dateDropdown = (elem) => {
 
   clear.click(function () {
     myDatepicker.clear()
-    start.text("ДД.ММ.ГГГГ")
-    end.text("ДД.ММ.ГГГГ")
+    date.text("Прибытие - Выезд")
   })
   apply.click(function () {
     Datepicker.find(".datepicker-inline").slideUp(400)
   })
 }
 
-export default dateDropdown
+export default filterDateDropdown

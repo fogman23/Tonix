@@ -18,14 +18,14 @@ include ../blocks/ui-kit/review/review
 
 include ../blocks/header/header.pug
 block content 
-  h1 Colors & Type
+  h2 Colors & Type
   br
-  h1 This one is the sub-section or widget title
-  h2 Next one is the item title inside widgets
-  h3 This is a label or CTA text
-  p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nam temporibus perferendis animi dignissimos vitae eius sapiente at. Odit nesciunt rerum dolores culpa! Aut modi delectus corporis a maiores!
+  h1 H1 This one is the sub-section or widget title
+  h2 H2 Next one is the item title inside widgets
+  h3 H3 This is a label or CTA text
+  p BODY Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nam temporibus perferendis animi dignissimos vitae eius sapiente at. Odit nesciunt rerum dolores culpa! Aut modi delectus corporis a maiores!
   br
-  h1 Form Elements 
+  h2 Form Elements 
   br
   +textField("text field", "name", "Name")
   br
@@ -39,10 +39,10 @@ block content
   +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
   br
   br
-  +dateDropdown("date dropdown", "date dropdown")
+  +dateDropdown("date dropdown", "date dropdown", "date-dropdown-1")
   br
   br
-  +filterDateDropdown("filter date dropdown", "filterDate")
+  +filterDateDropdown("filter date dropdown", "filter-date-dropdown-1")
   br
   br
   +subscriptionTextField("subscription text field", "subscribe", "Email")
@@ -99,7 +99,7 @@ block content
   include ../blocks/ui-kit/pagination/pagination
   br
   br
-  +checkboxList("expandable checkbox list")
+  +checkboxList("expandable checkbox list", "checkbox-list-1")
   br
   br
   +richCheckboxList("rich Checkbox Buttons")
@@ -117,6 +117,7 @@ block content
   br
   +review("images/dist/review.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12")
   br
+  h2 Cards
   br
   include ../blocks/ui-kit/selection-card/selection-card
   br

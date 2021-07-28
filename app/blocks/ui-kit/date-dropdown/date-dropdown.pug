@@ -1,9 +1,16 @@
-mixin dateDropdown(from, to)
-  .date-dropdown
+mixin dateDropdown(from, to, id)
+  .date-dropdown(id=id)
+    //- .date-dropdown__select 
+    //-   label.date-dropdown__label= from
+    //-   input.date-dropdown__input(type="text" data-action="start" readonly placeholder="ДД.ММ.ГГГГ")
+    //- .date-dropdown__select
+    //-   label.date-dropdown__label= to
+    //-   input.date-dropdown__input(type="text" data-action="end" readonly placeholder="ДД.ММ.ГГГГ")
     .date-dropdown__select 
-      label.date-dropdown__label(for="start")= from
-      input.date-dropdown__input(type="text" id="start" placeholder="ДД.ММ.ГГ")
+      .date-dropdown__label= from
+      .date-dropdown__input(data-action="start") ДД.ММ.ГГГГ
     .date-dropdown__select
-      label.date-dropdown__label(for="end")= to
-      input.date-dropdown__input(type="text" id="end" placeholder="ДД.ММ.ГГ")
+      .date-dropdown__label= to
+      .date-dropdown__input(data-action="end") ДД.ММ.ГГГГ
+
 

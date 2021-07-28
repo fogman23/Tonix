@@ -14,9 +14,7 @@ mixin serviceItem(title, price, info)
     span.booking-card__title <span>№ </span>888
     span.booking-card__class Люкс
     span.booking-card__price 9 990₽ <span>в сутки</span>
-  .booking-card__dropdownDates
-    +dateDropdown("прибытие","firstDate")
-    +dateDropdown("выезд","lastDate")
+  +dateDropdown("прибытие", "выезд", "date-dropdown-2")
   +dropdownPeople("гости", "people-2")
   .booking-card__list-services
     +serviceItem("9 990₽ х 4 суток", "39 960₽", false)
