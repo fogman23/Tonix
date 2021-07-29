@@ -1,5 +1,3 @@
-@import "../ui-kit";
-
 .like {
   width: 40px;
   display: inline-block;
@@ -10,7 +8,7 @@
     opacity: 0;
     &:checked+.like__label:before {
       content: '\e87d';
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $purpleGradient;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       border-color: $purple;
@@ -33,6 +31,9 @@
     color: $dark25;
     cursor: pointer;
     line-height: 18px;
+    &:hover:before{
+      border-color: $dark50;
+    }
     &:before {
       position: absolute;
       content: '\e87e';
@@ -46,7 +47,7 @@
       border-radius: 10px;
       margin-right: 10px;
       padding-left: 3px;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 }

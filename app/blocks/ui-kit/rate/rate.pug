@@ -1,12 +1,11 @@
-.rate 
-  .rate__items 
-    input(type="radio" value="5" name="rate" id="rate-5").rate__item
-    label(for="rate-5").rate__label
-    input(type="radio" value="4" name="rate" id="rate-4").rate__item
-    label(for="rate-4").rate__label
-    input(type="radio" value="3" name="rate" id="rate-3").rate__item
-    label(for="rate-3").rate__label
-    input(type="radio" value="2" name="rate" id="rate-2").rate__item
-    label(for="rate-2").rate__label
-    input(type="radio" value="1" name="rate" id="rate-1").rate__item
-    label(for="rate-1").rate__label
+mixin rate(value)
+  .rate
+    .rate__body
+      .rate__active 
+      .rate__items 
+        input(type="radio" value="1" ).rate__item
+        input(type="radio" value="2" ).rate__item
+        input(type="radio" value="3" ).rate__item
+        input(type="radio" value="4" ).rate__item
+        input(type="radio" value="5" ).rate__item
+    .rate__value= value

@@ -1,6 +1,5 @@
-@import "../ui-kit";
-
 .toggle {
+  max-width: 320px;
   &__input {
     position: absolute;
     left: -999px;
@@ -10,7 +9,7 @@
     }
     &:checked+.toggle__label:after {
       left: 24px;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $purpleGradient;
     }
   }
   &__label {
@@ -20,6 +19,9 @@
     cursor: pointer;
     min-width: 100px;
     line-height: 18px;
+    &:hover:before{
+      border-color: $dark50;
+    }
     &:before {
       content: '';
       display: inline-block;

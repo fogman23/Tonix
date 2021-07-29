@@ -1,0 +1,25 @@
+include ../rate/rate
+mixin room(number, price, rate, review, luxe)
+  .room 
+    .room__slider.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          img.room__slide(src="images/dist/room1.jpg", alt="")
+        .swiper-slide
+          img.room__slide(src="images/dist/room2.jpg", alt="")
+        .swiper-slide
+          img.room__slide(src="images/dist/room3.jpg", alt="")
+        .swiper-slide
+          img.room__slide(src="images/dist/room4.jpg", alt="")
+      .swiper-pagination
+      .swiper-button-prev.swiper-button-hidden
+      .swiper-button-next.swiper-button-hidden
+    .room__info 
+      .room__top 
+        a(href="#").room__title <span>№ </span> #{number}
+        if luxe
+          span.room__luxe люкс
+        .room__price #{price}₽ <span>в сутки</span>
+      .room__bottom 
+        +rate(rate)
+        .room__review #{review} <span>Отзывов</span>

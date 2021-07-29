@@ -1,4 +1,4 @@
-@import "../ui-kit";
+@import "../variables";
 
 .checkbox, .checkbox-rich {
   width: 266px;
@@ -32,6 +32,9 @@
     align-items: flex-start;
     cursor: pointer;
     line-height: 20px;
+    &:hover:before{
+      border-color: $dark50;
+    }
     &:before {
       content: '';
       display: inline-block;
@@ -54,7 +57,7 @@
       border-left: 2px solid transparent;
       border-bottom: 2px solid transparent;
       transform: rotate(-45deg);
-      border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%, transparent 30%);
+      border-image: $purpleGradient;
       border-image-slice: 1;
       transition: all 0.3s ease;
     }

@@ -1,4 +1,5 @@
-@import "../ui-kit.scss";
+@import "../variables";
+
 button.btn {
   position: relative;
   font-size: 12px;
@@ -13,7 +14,7 @@ button.btn {
     width: 320px;
     height: 44px;
     border-radius: 22px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $purpleGradient;
     padding: 15px 0px;
   }
   i {
@@ -26,7 +27,7 @@ button.btn {
     height: 44px;
     padding: 15px 0px;
     border-radius: 22px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $purpleGradient;
     &:disabled {
       opacity: 0.5;
     }
@@ -50,7 +51,7 @@ button.btn {
       left: -4px;
       right: -4px;
       bottom: -4px;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $purpleGradient;
     }
     &:disabled {
       opacity: 1;

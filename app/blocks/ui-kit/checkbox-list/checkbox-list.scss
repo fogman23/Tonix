@@ -23,7 +23,6 @@
       transform: rotate(180deg);
     }
   }
-
   &__body {
     position: absolute;
     top: 30px;
@@ -33,12 +32,12 @@
     background-color: #fff;
     max-height: 0;
     overflow: hidden;
-    transition: 0.5s ease;
+    transition: all 0.5s ease;
     .checkbox {
       margin-bottom: 10px;
     }
     &.active {
-      max-height: 500px;
+      max-height: 300px;
     }
   }
 }

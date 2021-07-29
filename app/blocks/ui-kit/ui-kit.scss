@@ -1,10 +1,4 @@
-$dark: $textcolor;
-$dark75: rgba($dark, 0.75);
-$dark50: rgba($dark, 0.50);
-$dark25: rgba($dark, 0.25);
-$dark5: rgba($dark, 0.5);
-$purple: $accent;
-$green: #6fcf97;
+@import 'variables';
 
 h1 {
   font-size: 24px;
@@ -24,10 +18,4 @@ h3 {
   font-weight: 700;
   text-transform: uppercase;
   color: $dark;
-}
-body {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  color: $dark75;
 }

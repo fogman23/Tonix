@@ -1,4 +1,3 @@
-@import "../ui-kit.scss";
 .pagination {
   width: 241px;
   height: 75px;
@@ -18,7 +17,7 @@
     width: 40px;
     height: 40px;
     &_active {
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $purpleGradient;
       border-radius: 22px;
       .pagination__link {
         font-weight: 700;
@@ -33,11 +32,11 @@
     cursor: pointer;
   }
   &__next {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    background: $greenGradient;
     border-radius: 22px;
     i {
       font-size: 24px;
-      line-height: 21;
+      line-height: 40px;
       color: #fff;
     }
   }

@@ -14,6 +14,8 @@ include ../blocks/ui-kit/rich-checkbox-list/rich-checkbox-list
 include ../blocks/ui-kit/bullet-list/bullet-list
 include ../blocks/ui-kit/option-info/option-info
 include ../blocks/ui-kit/review/review
+include ../blocks/ui-kit/rate/rate
+include ../blocks/ui-kit/room/room
 
 
 include ../blocks/header/header.pug
@@ -33,9 +35,7 @@ block content
   +dropdownPeople("dropdown","people-1")
   br
   br
-  +dropdownRooms("dropdown","rooms-1")
-  br
-  br
+
   +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
   br
   br
@@ -46,6 +46,9 @@ block content
   br
   br
   +subscriptionTextField("subscription text field", "subscribe", "Email")
+  br
+  br
+  +dropdownRooms("dropdown","rooms-1")
   br
   br
   h3 checkbox buttons 
@@ -72,7 +75,9 @@ block content
   br
   br
   h3 rate button
-  include ../blocks/ui-kit/rate/rate
+  +rate("4")
+  br
+  +rate("5")
   br
   br
   +rangeSlider("Range Slider", "rangePrice", "rangePriceValue")
@@ -126,5 +131,9 @@ block content
   include ../blocks/ui-kit/registration-card/registration-card
   br
   include ../blocks/ui-kit/signin-card/signin-card
+  br
+  +room("888", "9 999", "5", "145", true)
+  br
+  +room("840", "9 999", "4", "65")
 
 include ../blocks/footer/footer.pug
