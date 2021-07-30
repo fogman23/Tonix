@@ -1,9 +1,11 @@
 - var disabled = false;
+- var arrow = true;
 
-mixin btnBig(title)
+mixin btnBig(title, arrow)
   button.btn.btn_big
     span= title
-    i.material-icons arrow_forward
+    if arrow
+      i.material-icons arrow_forward
 
 mixin btnSmall(title, disabled)
   button(disabled=disabled).btn.btn_small= title

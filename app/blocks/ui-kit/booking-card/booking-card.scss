@@ -8,6 +8,10 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 30px 30px 30px;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 15px 30px 15px;
+    width: 320px;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -39,8 +43,16 @@
       font-weight: 400;
     }
   }
-  .dropdown, .date-dropdown {
+  .date-dropdown, .dropdown {
     margin-top: 20px;
+    @include media-breakpoint-down(sm) {
+      width: 290px;
+    }
+  }
+  .date-dropdown .date-dropdown__select {
+    @include media-breakpoint-down(sm) {
+      width: 140px;
+    }
   }
   &__list-services {
     margin-top: 20px;
@@ -52,7 +64,10 @@
         margin-bottom: 10px;
       }
       &__title {
-        width: 214px;
+        width: 215px;
+        @include media-breakpoint-down(sm) {
+          width: 200px;
+        }
       }
       &__price {
         flex: 1 1;
@@ -101,6 +116,11 @@
       width: 300px;
       height: 1px;
       border-bottom: 1px dashed $dark25
+    }
+  }
+  .btn_big {
+    @include media-breakpoint-down(sm) {
+      width: 290px;
     }
   } 
 }

@@ -19,121 +19,123 @@ include ../blocks/ui-kit/room/room
 
 
 include ../blocks/header/header.pug
-block content 
-  h2 Colors & Type
-  br
-  h1 H1 This one is the sub-section or widget title
-  h2 H2 Next one is the item title inside widgets
-  h3 H3 This is a label or CTA text
-  p BODY Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nam temporibus perferendis animi dignissimos vitae eius sapiente at. Odit nesciunt rerum dolores culpa! Aut modi delectus corporis a maiores!
-  br
-  h2 Form Elements 
-  br
-  +textField("text field", "name", "Name")
-  br
-  br
-  +dropdownPeople("dropdown","people-1")
-  br
-  br
+block content
+  .container
+    br 
+    h2 Colors & Type
+    br
+    h1 H1 This one is the sub-section or widget title
+    h2 H2 Next one is the item title inside widgets
+    h3 H3 This is a label or CTA text
+    p BODY Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nam temporibus perferendis animi dignissimos vitae eius sapiente at. Odit nesciunt rerum dolores culpa! Aut modi delectus corporis a maiores!
+    br
+    h2 Form Elements 
+    br
+    +textField("text field", "name", "Name")
+    br
+    br
+    +dropdownPeople("dropdown","people-1")
+    br
+    br
 
-  +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
-  br
-  br
-  +dateDropdown("date dropdown", "date dropdown", "date-dropdown-1")
-  br
-  br
-  +filterDateDropdown("filter date dropdown", "filter-date-dropdown-1")
-  br
-  br
-  +subscriptionTextField("subscription text field", "subscribe", "Email")
-  br
-  br
-  +dropdownRooms("dropdown","rooms-1")
-  br
-  br
-  h3 checkbox buttons 
-  br
-  +checkbox("Можно курить", "smoke")
-  br
-  +checkbox("Можно с питомцами", "pets")
-  br
-  +checkbox("Можно пригласить гостей (до 10 человек)", "party")
-  br
-  h3 ratio buttons
-  br
-  +radio("Мужчина", "radio", 'm', "r1")
-  +radio("Женщина", "radio", "w", "r2")
-  br
-  br
-  h3 toggle 
-  br
-  +toggle("Получить спецпедложение", "bonus")
-  br
-  h3 like button
-  br
-  +like("like", "12")
-  br
-  br
-  h3 rate button
-  +rate("4")
-  br
-  +rate("5")
-  br
-  br
-  +rangeSlider("Range Slider", "rangePrice", "rangePriceValue")
-  br
-  h3 buttons
-  br
-  +btnSmall("Click me")
-  +btnSmall("Click me", true)
-  br
-  br
-  +btnSmallBorder("Click me")
-  +btnSmallBorder("Click me", true)
-  br
-  br
-  +btnText("Click me")
-  +btnText("Click me", true)
-  br
-  br
-  +btnBig("Перейти к оплате")
-  br
-  br
-  h3 pagination
-  br
-  include ../blocks/ui-kit/pagination/pagination
-  br
-  br
-  +checkboxList("expandable checkbox list", "checkbox-list-1")
-  br
-  br
-  +richCheckboxList("rich Checkbox Buttons")
-  br
-  br
-  h3 bullet list
-  +bulletList("Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00")
-  br
-  br
-  .div 
-    +optionInfo("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-    +optionInfo("location_city", "Удобство", "Окно в каждой из спален")
-    +optionInfo("whatshot", "Уют", "Номер оснащён камином")
-  br
-  br
-  +review("images/dist/review.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12")
-  br
-  h2 Cards
-  br
-  include ../blocks/ui-kit/selection-card/selection-card
-  br
-  include ../blocks/ui-kit/booking-card/booking-card
-  br
-  include ../blocks/ui-kit/registration-card/registration-card
-  br
-  include ../blocks/ui-kit/signin-card/signin-card
-  br
-  +room("888", "9 999", "5", "145", true)
-  br
-  +room("840", "9 999", "4", "65")
+    +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
+    br
+    br
+    +dateDropdown("date dropdown", "date dropdown", "date-dropdown-1")
+    br
+    br
+    +filterDateDropdown("filter date dropdown", "filter-date-dropdown-1")
+    br
+    br
+    +subscriptionTextField("Email")
+    br
+    br
+    +dropdownRooms("dropdown","rooms-1")
+    br
+    br
+    h3 checkbox buttons 
+    br
+    +checkbox("Можно курить", "smoke")
+    br
+    +checkbox("Можно с питомцами", "pets")
+    br
+    +checkbox("Можно пригласить гостей (до 10 человек)", "party")
+    br
+    h3 ratio buttons
+    br
+    +radio("Мужчина", "radio", 'm', "r1")
+    +radio("Женщина", "radio", "w", "r2")
+    br
+    br
+    h3 toggle 
+    br
+    +toggle("Получить спецпедложение", "bonus")
+    br
+    h3 like button
+    br
+    +like("like", "12")
+    br
+    br
+    h3 rate button
+    +rate("4")
+    br
+    +rate("5")
+    br
+    br
+    +rangeSlider("Range Slider", "rangePrice", "rangePriceValue")
+    br
+    h3 buttons
+    br
+    +btnSmall("Click me")
+    +btnSmall("Click me", true)
+    br
+    br
+    +btnSmallBorder("Click me")
+    +btnSmallBorder("Click me", true)
+    br
+    br
+    +btnText("Click me")
+    +btnText("Click me", true)
+    br
+    br
+    +btnBig("Перейти к оплате", true)
+    br
+    br
+    h3 pagination
+    br
+    include ../blocks/ui-kit/pagination/pagination
+    br
+    br
+    +checkboxList("expandable checkbox list", "checkbox-list-1")
+    br
+    br
+    +richCheckboxList("rich Checkbox Buttons")
+    br
+    br
+    h3 bullet list
+    +bulletList("Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00")
+    br
+    br
+    .div 
+      +optionInfo("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+      +optionInfo("location_city", "Удобство", "Окно в каждой из спален")
+      +optionInfo("whatshot", "Уют", "Номер оснащён камином")
+    br
+    br
+    +review("images/dist/review.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12")
+    br
+    h2 Cards
+    br
+    include ../blocks/ui-kit/selection-card/selection-card
+    br
+    include ../blocks/ui-kit/booking-card/booking-card
+    br
+    include ../blocks/ui-kit/registration-card/registration-card
+    br
+    include ../blocks/ui-kit/signin-card/signin-card
+    br
+    +room("888", "9 999", "5", "145", true)
+    br
+    +room("840", "9 999", "4", "65")
 
 include ../blocks/footer/footer.pug

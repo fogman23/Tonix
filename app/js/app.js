@@ -5,6 +5,7 @@ window.$ = $
 
 require('./libs/air-datepicker/js/datepicker')
 require('./libs/jquery.maskedinput/jquery.maskedinput.min')
+import hamburger from '../blocks/ui-kit/hamburger/hamburger'
 import dropdown from '../blocks/ui-kit/dropdown/dropdown'
 import dateDropdown from '../blocks/ui-kit/date-dropdown/date-dropdown'
 import filterDateDropdown from '../blocks/ui-kit/filter-date-dropdown/filter-date-dropdown'
@@ -18,6 +19,8 @@ import room from '../blocks/ui-kit/room/room'
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	hamburger()
+	
 	rangeSlider()
 
 	dropdown("people-1", "people")

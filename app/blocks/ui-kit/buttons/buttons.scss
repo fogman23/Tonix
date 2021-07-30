@@ -10,12 +10,12 @@ button.btn {
   border: transparent;
   background: #fff;
   color: #fff;
+  padding: 0;
   &_big {
     width: 320px;
     height: 44px;
     border-radius: 22px;
     background: $purpleGradient;
-    padding: 15px 0px;
   }
   i {
     position: absolute;
@@ -25,7 +25,6 @@ button.btn {
   &_small {
     width: 99px;
     height: 44px;
-    padding: 15px 0px;
     border-radius: 22px;
     background: $purpleGradient;
     &:disabled {
@@ -38,7 +37,6 @@ button.btn {
     border-radius: 22px;
     width: 95px;
     height: 40px;
-    padding: 12px 0;
     margin: 2px;
     color: $purple;
     background: #fff;

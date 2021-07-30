@@ -1,3 +1,4 @@
+include ../ui-kit/buttons/buttons
 doctype html
 html(lang="en")
   head
@@ -7,4 +8,50 @@ html(lang="en")
     link(rel="stylesheet", href="css/main.min.css")
     title Toxin
   body
+    header.header 
+      .header__container.container
+        a(href="#").header__logo
+          img(src="images/dist/logo.svg", alt="Logo")
+        include ../ui-kit/hamburger/hamburger
+        ul.header__menu.menu
+          li.menu__item
+            a(href="#").menu__link.menu__link_active О нас
+          li.menu__item.menu__item_dropdown
+            a(href="#").menu__link Услуги
+          li.menu__item
+            a(href="#").menu__link Вакансии
+          li.menu__item
+            a(href="#").menu__link Новости
+          li.menu__item.menu__item_dropdown
+            a(href="#").menu__link Соглашения
+        .header__services
+          +btnSmallBorder("Войти")
+          +btnBig("Зарегистрироваться") 
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    header.header 
+      .header__container.container
+        a(href="#").header__logo
+          img(src="images/dist/logo.svg", alt="Logo")
+        include ../ui-kit/hamburger/hamburger
+        ul.header__menu.menu
+          li.menu__item
+            a(href="#").menu__link.menu__link_active О нас
+          li.menu__item.menu__item_dropdown
+            a(href="#").menu__link Услуги
+          li.menu__item
+            a(href="#").menu__link Вакансии
+          li.menu__item
+            a(href="#").menu__link Новости
+          li.menu__item.menu__item_dropdown
+            a(href="#").menu__link Соглашения
+        .header__services
+          a(href="#").header__user-account Юлий Цезарь
+
     block content

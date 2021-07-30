@@ -6,21 +6,34 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @include media-breakpoint-down(sm) {
+    padding: 40px 15px 30px 15px;
+    width: 320px;
+  }
   .form-registration {
     margin-top: 20px;
     margin-bottom: 30px;
     .text-field {
       margin-top: 10px;
+      @include media-breakpoint-down(sm) {
+        width: 290px;
+      }
     }
     .masked-text-field {
       margin-top: 20px;
       margin-bottom: 10px;
+      @include media-breakpoint-down(sm) {
+        width: 290px;
+      }
     }
     .toggle {
       margin-top: 10px;
     }
     .btn_big {
       margin-top: 20px;
+      @include media-breakpoint-down(sm) {
+        width: 290px;
+      }
     }
     .radio {
       margin-top: 10px;

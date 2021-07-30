@@ -1,5 +1,4 @@
-mixin subscriptionTextField(label, name, placeholder)
+mixin subscriptionTextField(placeholder)
   .subscription-text-field 
-    label.subscription-text-field__label(for=name)= label
-    input.subscription-text-field__input(type="text" id=name placeholder=placeholder)
+    input.subscription-text-field__input(type="text" placeholder=placeholder)
     button.material-icons.subscription-text-field__button arrow_forward

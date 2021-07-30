@@ -1,0 +1,41 @@
+@import '../variables.scss';
+
+.hamburger {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    flex: 0 0 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40px;
+    margin: 3px 0;
+    border-radius: 50%;
+    background: $purpleGradient;
+  }
+  span {
+    display: block;
+    height: 2px;
+    margin: 3px 0;
+    width: 26px;
+    background-color: #fff;
+    transition: 0.5s all;
+  }
+  &_active {
+    span {
+      margin-bottom: -2px;
+      &:nth-child(1) {
+        transform: translateY(0px) rotate(-45deg);
+      }
+      &:nth-child(2) {
+        display: none;
+      } 
+      &:nth-child(3) {
+        transform: translateY(-3px) rotate(45deg);
+      }
+    }
+  }
+}

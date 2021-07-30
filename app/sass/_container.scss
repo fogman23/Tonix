@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @include media-breakpoint-up(xl) {
+		width: 1200px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		min-width: 991px;
+	}
+
+	@include media-breakpoint-up(md) {
+		min-width: 768px;
+	}
+
+	@include media-breakpoint-up(sm) {
+		min-width: 575px;
+	}
+
+  @media (max-width: 360px) {
+    padding: 0;
+  }
+}
