@@ -1,0 +1,45 @@
+.checkbox-list-expandable {
+  position: relative;
+  width: 266px;
+  background-color: #fff;
+  &__title {
+    cursor: pointer;
+    position: relative;
+    color: $dark;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:after {
+      content: '\e5cf';
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      font-size: 24px;
+      font-family: "Material Icons";
+      color: $dark75;
+      transition: 0.5s ease;
+    }
+    &.active:after {
+      transform: rotate(180deg);
+    }
+  }
+  &__body {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    .checkbox {
+      margin-bottom: 10px;
+    }
+    &.active {
+      max-height: 300px;
+    }
+  }
+}
+  

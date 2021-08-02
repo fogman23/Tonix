@@ -115,7 +115,7 @@ function deploy() {
 }
 
 function startwatch() {
-	watch([`app/${preprocessor}/**/*`, 'app/blocks/**/*.scss'], { usePolling: true }, styles)
+	watch([`app/${preprocessor}/**/*`, 'app/blocks/**/*.scss', 'app/pages/*.scss'], { usePolling: true }, styles)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
 	watch('app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	watch(['app/pages/**/*.pug', 'app/blocks/**/*.pug'], { usePolling: true }, html2pug)

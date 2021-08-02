@@ -1,7 +1,7 @@
 @import "../variables";
 
 .checkbox, .checkbox-rich {
-  width: 266px;
+  max-width: 266px;
   &__input {
     position: absolute;
     left: -999px;

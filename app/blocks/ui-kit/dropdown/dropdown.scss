@@ -1,10 +1,9 @@
 .dropdown {
   position: relative;
-  width: 320px;
-  display: inline-block;
+  max-width: 320px;
+  min-width: 266px;
   &__label {
     position: relative;
-    display: block;
     font-size: 12px;
     line-height: 15px;
     color: $dark;
@@ -18,7 +17,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%;
+    max-width: 266px;
     height: 44px;
     background-color: #fff;
     border: 1px solid $dark25;
@@ -57,7 +56,7 @@
     z-index: 2;
     max-height: 0;
     left: 0;
-    width: 100%;
+    width: 266px;
     margin-top: -4px;
     border: 1px solid $dark50;
     border-top: none;
@@ -89,6 +88,8 @@
       margin-bottom: 7px;
     }
     &-title {
+      font-size: 12px;
+      line-height: 15px;
       flex: 1 1;
     }
     &-count {

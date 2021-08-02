@@ -10,6 +10,7 @@ include ../blocks/ui-kit/like/like
 include ../blocks/ui-kit/range-slider/range-slider
 include ../blocks/ui-kit/buttons/buttons
 include ../blocks/ui-kit/checkbox-list/checkbox-list
+include ../blocks/ui-kit/checkbox-list-expandable/checkbox-list-expandable
 include ../blocks/ui-kit/rich-checkbox-list/rich-checkbox-list
 include ../blocks/ui-kit/bullet-list/bullet-list
 include ../blocks/ui-kit/option-info/option-info
@@ -34,7 +35,7 @@ block content
     +textField("text field", "name", "Name")
     br
     br
-    +dropdownPeople("dropdown","people-1")
+    +dropdownPeople("dropdown")
     br
     br
 
@@ -50,16 +51,13 @@ block content
     +subscriptionTextField("Email")
     br
     br
-    +dropdownRooms("dropdown","rooms-1")
+    +dropdownRooms("dropdown")
     br
     br
-    h3 checkbox buttons 
+    +checkboxList("checkbox buttons")
     br
-    +checkbox("Можно курить", "smoke")
     br
-    +checkbox("Можно с питомцами", "pets")
-    br
-    +checkbox("Можно пригласить гостей (до 10 человек)", "party")
+    +checkboxListExpandable("expandable checkbox list")
     br
     h3 ratio buttons
     br
@@ -106,7 +104,7 @@ block content
     include ../blocks/ui-kit/pagination/pagination
     br
     br
-    +checkboxList("expandable checkbox list", "checkbox-list-1")
+    +checkboxList("expandable checkbox list")
     br
     br
     +richCheckboxList("rich Checkbox Buttons")

@@ -1,7 +1,8 @@
-mixin rangeSlider(label, id, idValue)
+mixin rangeSlider(label, text = "")
   .range-slider 
     .range-slider__top 
       span.range-slider__label= label
-      span.range-slider__value(id=idValue) 
-    .range-slider__slider(id=id)
+      span.range-slider__value 
+    .range-slider__input
+    .range-slider__text= text
     

@@ -8,7 +8,7 @@ html(lang="en")
     link(rel="stylesheet", href="css/main.min.css")
     title Toxin
   body
-    header.header 
+    header.header.header-login 
       .header__container.container
         a(href="#").header__logo
           img(src="images/dist/logo.svg", alt="Logo")
@@ -25,7 +25,6 @@ html(lang="en")
           li.menu__item.menu__item_dropdown
             a(href="#").menu__link Соглашения
         .header__services
-          +btnSmallBorder("Войти")
-          +btnBig("Зарегистрироваться") 
+          a(href="#").header__user-account Юлий Цезарь
 
     block content

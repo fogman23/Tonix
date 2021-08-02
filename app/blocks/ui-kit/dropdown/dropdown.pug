@@ -1,6 +1,7 @@
 include ../buttons/buttons
-mixin dropdownRooms(label, id)
-  div(id=id).dropdown
+
+mixin dropdownRooms(label)
+  .dropdown.dropdown-rooms
     .dropdown__label= label
     .dropdown__select 2 спальни, 2 кровати...
     .dropdown__body 
@@ -21,8 +22,8 @@ mixin dropdownRooms(label, id)
           span.dropdown__item-count 0
           button.btn-plus +
 
-mixin dropdownPeople(label, id)
-  div(id=id).dropdown
+mixin dropdownPeople(label)
+  .dropdown.dropdown-people
     .dropdown__label= label
     .dropdown__select сколько гостей
     .dropdown__body 

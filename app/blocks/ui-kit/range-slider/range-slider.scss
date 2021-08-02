@@ -16,8 +16,12 @@
     color: $dark50;
     font-weight: 400;
   }
-  &__slider {
+  &__input {
     margin-top: 23px;
+  }
+  &__text {
+    margin-top: 10px;
+    color: $dark50;
   }
   .noUi-base {
     height: 6px;

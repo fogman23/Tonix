@@ -1,11 +1,9 @@
 include ../checkbox/checkbox
-mixin checkboxList(title, id)
-  .checkbox-list(id=id)
+mixin checkboxList(title)
+  .checkbox-list
     .checkbox-list__title= title
     .checkbox-list__body 
-      +checkbox("Завтрак", "breakfast")
-      +checkbox("Письменный стол", "desk")
-      +checkbox("Стул для кормления", "feeding-chair")
-      +checkbox("Кроватка", "crib")
-      +checkbox("Телевизор", "television")
-      +checkbox("Шампунь", "shampoo")
+      +checkbox("Можно курить", "smoke")
+      +checkbox("Можно с питомцами", "pets")
+      +checkbox("Можно пригласить гостей (до 10 человек)", "party")
+

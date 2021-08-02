@@ -1,0 +1,53 @@
+include ../blocks/ui-kit/room/room
+include ../blocks/ui-kit/dropdown/dropdown
+include ../blocks/ui-kit/range-slider/range-slider
+include ../blocks/ui-kit/filter-date-dropdown/filter-date-dropdown
+include ../blocks/ui-kit/checkbox-list/checkbox-list
+include ../blocks/ui-kit/checkbox-list-expandable/checkbox-list-expandable
+include ../blocks/ui-kit/rich-checkbox-list/rich-checkbox-list
+include ../blocks/ui-kit/buttons/buttons
+
+include ../blocks/header/header
+block content 
+  .search-room-page 
+    .search-room-page__container.container 
+      button.btn.btn_filter
+      .search-room-page__sidebar
+        +filterDateDropdown("даты пребывания в отеле")
+        +dropdownPeople("гости")
+        +rangeSlider("диапазон цены", "Стоимость за сутки пребывания в номере")
+        +checkboxList("правила дома")
+        +richCheckboxList("доступность")
+        +dropdownRooms("удобства номера")
+        +checkboxListExpandable("дополнительные удобства")
+      .search-room-page__content 
+        h1.search-room-page__title Номера, которые мы для вас подобрали
+        .search-room-page__items 
+          .search-room-page__item
+            +room("888", "9 999", "5", "145", true)
+          .search-room-page__item
+            +room("840", "9 999", "4", "65")
+          .search-room-page__item
+            +room("980", "8 500", "3", "35", true)
+          .search-room-page__item
+            +room("856", "7 300", "5", "19")
+          .search-room-page__item
+            +room("740", "6 000", "4", "44")
+          .search-room-page__item
+            +room("982", "5 800", "3", "56")
+          .search-room-page__item
+            +room("678", "5 500", "5", "45")
+          .search-room-page__item
+            +room("450", "5 300", "4", "39")
+          .search-room-page__item
+            +room("350", "5 000", "3", "77")
+          .search-room-page__item
+            +room("666", "5 000", "5", "25")
+          .search-room-page__item
+            +room("444", "5 000", "3", "15")
+          .search-room-page__item
+            +room("352", "5 000", "3", "55")
+        .search-room-page__pagination    
+          include ../blocks/ui-kit/pagination/pagination
+
+include ../blocks/footer/footer.pug

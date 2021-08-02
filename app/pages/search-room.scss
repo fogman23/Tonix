@@ -1,0 +1,86 @@
+@import '../blocks/ui-kit/variables.scss';
+
+.search-room-page {
+  border-bottom: 1px solid $dark25;
+  &__container {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(sm) {
+      padding-top: 200px;
+    }
+  }
+  .btn.btn_filter {
+    display: none;
+    position: fixed;
+    top: 150px;
+    right: 15px;
+    z-index: 11;
+    @include media-breakpoint-down(sm) {
+      display: inline-block;
+    }
+  }
+  &__sidebar {
+    width: 266px;
+    background-color: #fff;
+    @include media-breakpoint-down(sm) {
+      position: fixed;
+      width: 320px;
+      left: -320px;
+      z-index: 10;
+      padding: 40px 20px;
+      height: calc(100vh - 140px);
+      top: 140px;
+      overflow: scroll;
+      transition: left 0.5s ease;
+      &.active {
+        left: 0;
+      }
+    }
+    .filter-date-dropdown {
+      margin-bottom: 20px;
+    }
+    .dropdown, .range-slider, .checkbox-list, .rich-checkbox-list {
+      margin-bottom: 30px;
+    }
+  }
+  &__content {
+    padding-left: 60px;
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+  }
+  &__title {}
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    margin-top: 20px;
+    margin-right: 12px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    @include media-breakpoint-down(xl) {
+      &:nth-child(3n) {
+        margin-right: 12px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &:nth-child(1n) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
