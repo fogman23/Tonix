@@ -11,14 +11,17 @@ include ../blocks/header/header
 block content 
   .search-room-page 
     .search-room-page__container.container 
-      button.btn.btn_filter
+      +btnFilter()
       .search-room-page__sidebar
         +filterDateDropdown("даты пребывания в отеле")
         +dropdownPeople("гости")
         +rangeSlider("диапазон цены", "Стоимость за сутки пребывания в номере")
+        - var checkboxList = [{name: 'Можно курить', id: 'smoke'},{name: 'Можно с питомцами', id: 'pets'},{name: 'Можно пригласить гостей (до 10 человек)', id: 'party'}]
         +checkboxList("правила дома")
+        - var richCheckboxList = [{name: 'Широкий коридор', id: 'ggg', text: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', id: 'rrr', text: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]
         +richCheckboxList("доступность")
         +dropdownRooms("удобства номера")
+        - var checkboxListExpandable = [{name: 'Завтрак', id: 'breakfast'}, {name: 'Письменный стол', id: 'desk'}, {name: 'Стул для кормления', id: 'feeding-chair'}, {name: 'Кроватка', id: 'crib'}, {name: 'Телевизор', id: 'television'}, {name: 'Шампунь', id: 'shampoo'}]
         +checkboxListExpandable("дополнительные удобства")
       .search-room-page__content 
         h1.search-room-page__title Номера, которые мы для вас подобрали

@@ -1,10 +1,10 @@
-mixin checkbox(label, name)
+mixin checkbox( data )
   .checkbox
-    input(type="checkbox" id=name).checkbox__input
-    label(for=name).checkbox__label= label 
+    input(type="checkbox" id= data.id).checkbox__input
+    label(for= data.id).checkbox__label= data.name 
       
-mixin richCheckbox(label, name, text)
+mixin richCheckbox( data )
   .checkbox-rich
-    input(type="checkbox" id=name).checkbox-rich__input
-    label(for=name).checkbox-rich__label= label 
-    .checkbox-rich__text= text
+    input(type="checkbox" id= data.id).checkbox-rich__input
+    label(for= data.id).checkbox-rich__label= data.name 
+    .checkbox-rich__text= data.text

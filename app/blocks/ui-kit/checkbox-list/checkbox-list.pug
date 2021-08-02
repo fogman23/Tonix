@@ -1,9 +1,8 @@
 include ../checkbox/checkbox
+- var checkboxList = []
 mixin checkboxList(title)
   .checkbox-list
     .checkbox-list__title= title
     .checkbox-list__body 
-      +checkbox("Можно курить", "smoke")
-      +checkbox("Можно с питомцами", "pets")
-      +checkbox("Можно пригласить гостей (до 10 человек)", "party")
-
+      each item in checkboxList
+        +checkbox(item)
