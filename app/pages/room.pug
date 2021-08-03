@@ -1,0 +1,50 @@
+include ../blocks/ui-kit/option-info/option-info
+include ../blocks/ui-kit/review/review
+include ../blocks/ui-kit/bullet-list/bullet-list
+include ../blocks/ui-kit/ring-impressions/ring-impressions
+
+
+include ../blocks/header/header
+block content 
+  .room-page 
+    .room-page__gallery.gallery 
+      .gallery__column.gallery__column_left
+        img(src="images/dist/room/image1.jpg", alt="foto")
+      .gallery__column.gallery__column_right
+        .gallery__row
+          img(src="images/dist/room/image2.jpg", alt="foto")
+        .gallery__row
+          img(src="images/dist/room/image3.jpg", alt="foto")
+    .room-page__container.container
+      .room-page__content 
+        .room-page__info
+          .room-page__column
+            h2.room-page__title Сведения о номере
+            .info-options 
+              +optionInfo("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+              +optionInfo("location_city", "Удобство", "Окно в каждой из спален")
+              +optionInfo("whatshot", "Уют", "Номер оснащён камином")
+          .room-page__column
+            h2.room-page__title Впечатления от номера
+            +ringImpressions()
+        .room-page__reviews.reviews
+          .reviews__header
+            h2.room-page__title Отзывы посетителей номера
+            .reviews__total 2 отзыва
+          .reviews__items 
+            .reviews__item
+              +review("images/dist/review.jpg", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", "12")
+            .reviews__item
+              +review("images/dist/review.jpg", "Патрисия Стёклышкова", "Неделю назад", "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент", "2")
+        .room-page__additions
+          .room-page__column 
+            h2.room-page__title Правила
+            +bulletList("Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00")
+          .room-page__column 
+            h2.room-page__title Отмена
+            .room-page__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+      .room-page__sitebar
+        include ../blocks/ui-kit/booking-card/booking-card
+
+include ../blocks/footer/footer.pug

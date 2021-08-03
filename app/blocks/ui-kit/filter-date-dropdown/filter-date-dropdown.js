@@ -17,6 +17,7 @@ const filterDateDropdown = () => {
         date = Datepicker.find("[data-action=date]"),
         myDatepicker = Datepicker.datepicker().data('datepicker')
 
+      Datepicker.find(".datepicker-inline").addClass("datepicker-small")
       Datepicker.find(".datepicker").append("<div class='buttons'></div>")
       Datepicker.find(".buttons").append("<button class='btn btn_text' date-action='apply'>применить</button>").append("<button class='btn btn_text' date-action='clear'>очистить</button>")
 
@@ -36,11 +37,11 @@ const filterDateDropdown = () => {
         }
       })
       date.click(function () {
-        Datepicker.find(".datepicker-inline").slideDown(400)
+        Datepicker.find(".datepicker-inline").slideToggle(500)
       })
       $(document).mouseup(function (e) {
         if (!Datepicker.is(e.target) && Datepicker.has(e.target).length === 0) {
-          Datepicker.find(".datepicker-inline").slideUp(400)
+          Datepicker.find(".datepicker-inline").slideUp(500)
         }
       })
 
@@ -52,7 +53,7 @@ const filterDateDropdown = () => {
         date.text("Прибытие - Выезд")
       })
       apply.click(function () {
-        Datepicker.find(".datepicker-inline").slideUp(400)
+        Datepicker.find(".datepicker-inline").slideUp(500)
       })
     }
   }

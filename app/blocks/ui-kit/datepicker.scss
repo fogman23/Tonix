@@ -9,6 +9,7 @@
     width: 320px;
   }
 }
+
 .datepicker {
   font-family: "Montserrat";
   width: 280px;
@@ -185,5 +186,28 @@
   .buttons {
     display: flex;
     justify-content: space-between;
+  }
+}
+.datepicker-inline.datepicker-small {
+  width: 267px;
+  .datepicker {
+    width: 245px;
+    padding: 10px;
+    &--nav {
+      &-title {
+        font-size: 16px;
+      }
+    }
+    &--days-names {
+      height: 35px;
+    }
+    &--cell-day {
+      width: 35px;
+      height: 35px;
+    }
+    &--cell-day.-range-from-:before, &--cell-day.-range-to-:before {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
