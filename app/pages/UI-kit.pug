@@ -1,26 +1,35 @@
-include ../blocks/ui-kit/text-field/text-field
-include ../blocks/ui-kit/dropdown/dropdown
-include ../blocks/ui-kit/date-dropdown/date-dropdown
-include ../blocks/ui-kit/filter-date-dropdown/filter-date-dropdown
-include ../blocks/ui-kit/subscription-text-field/subscription-text-field
-include ../blocks/ui-kit/checkbox/checkbox
-include ../blocks/ui-kit/radio/radio
-include ../blocks/ui-kit/toggle/toggle
-include ../blocks/ui-kit/like/like
-include ../blocks/ui-kit/range-slider/range-slider
-include ../blocks/ui-kit/buttons/buttons
-include ../blocks/ui-kit/checkbox-list/checkbox-list
-include ../blocks/ui-kit/checkbox-list-expandable/checkbox-list-expandable
-include ../blocks/ui-kit/rich-checkbox-list/rich-checkbox-list
-include ../blocks/ui-kit/bullet-list/bullet-list
-include ../blocks/ui-kit/option-info/option-info
-include ../blocks/ui-kit/review/review
-include ../blocks/ui-kit/rate/rate
-include ../blocks/ui-kit/room/room
+include ../blocks/ui-kit/mixins/text-field/text-field
+include ../blocks/ui-kit/mixins/dropdown/dropdown
+include ../blocks/ui-kit/mixins/date-dropdown/date-dropdown
+include ../blocks/ui-kit/mixins/filter-date-dropdown/filter-date-dropdown
+include ../blocks/ui-kit/mixins/subscription-text-field/subscription-text-field
+include ../blocks/ui-kit/mixins/checkbox/checkbox
+include ../blocks/ui-kit/mixins/radio/radio
+include ../blocks/ui-kit/mixins/toggle/toggle
+include ../blocks/ui-kit/mixins/like/like
+include ../blocks/ui-kit/mixins/range-slider/range-slider
+include ../blocks/ui-kit/mixins/buttons/buttons
+include ../blocks/ui-kit/mixins/checkbox-list/checkbox-list
+include ../blocks/ui-kit/mixins/checkbox-list-expandable/checkbox-list-expandable
+include ../blocks/ui-kit/mixins/rich-checkbox-list/rich-checkbox-list
+include ../blocks/ui-kit/mixins/bullet-list/bullet-list
+include ../blocks/ui-kit/mixins/option-info/option-info
+include ../blocks/ui-kit/mixins/review/review
+include ../blocks/ui-kit/mixins/rate/rate
+include ../blocks/ui-kit/mixins/room/room
 
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/main.min.css")
+    title Toxin
+  body
 
-include ../blocks/header/header.pug
 block content
+  include ../blocks/header/header
   .container
     br 
     h2 Colors & Type
@@ -38,7 +47,6 @@ block content
     +dropdownPeople("dropdown")
     br
     br
-
     +maskedTextField("masked text field", "birthday", "ДД.ММ.ГГГГ")
     br
     br
@@ -54,9 +62,11 @@ block content
     +dropdownRooms("dropdown")
     br
     br
+    - var checkboxList = [{name: 'Можно курить', id: 'smoke'},{name: 'Можно с питомцами', id: 'pets'},{name: 'Можно пригласить гостей (до 10 человек)', id: 'party'}]
     +checkboxList("checkbox buttons")
     br
     br
+    - var checkboxListExpandable = [{name: 'Завтрак', id: 'breakfast'}, {name: 'Письменный стол', id: 'desk'}, {name: 'Стул для кормления', id: 'feeding-chair'}, {name: 'Кроватка', id: 'crib'}, {name: 'Телевизор', id: 'television'}, {name: 'Шампунь', id: 'shampoo'}]
     +checkboxListExpandable("expandable checkbox list")
     br
     h3 ratio buttons
@@ -84,19 +94,19 @@ block content
     br
     h3 buttons
     br
-    +btnSmall("Click me")
-    +btnSmall("Click me", true)
+    +btnSmall("Click me", "")
+    +btnSmall("Click me", "", true)
     br
     br
-    +btnSmallBorder("Click me")
-    +btnSmallBorder("Click me", true)
+    +btnSmallBorder("Click me", "")
+    +btnSmallBorder("Click me", "", true)
     br
     br
     +btnText("Click me")
     +btnText("Click me", true)
     br
     br
-    +btnBig("Перейти к оплате", true)
+    +btnBig("Перейти к оплате", "", true)
     br
     br
     h3 pagination
@@ -104,9 +114,7 @@ block content
     include ../blocks/ui-kit/pagination/pagination
     br
     br
-    +checkboxList("expandable checkbox list")
-    br
-    br
+    - var richCheckboxList = [{name: 'Широкий коридор', id: 'ggg', text: 'Ширина коридоров в номере не менее 91 см.'}, {name: 'Помощник для инвалидов', id: 'rrr', text: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]
     +richCheckboxList("rich Checkbox Buttons")
     br
     br
@@ -135,5 +143,5 @@ block content
     +room("888", "9 999", "5", "145", true)
     br
     +room("840", "9 999", "4", "65")
-
-include ../blocks/footer/footer.pug
+  
+  include ../blocks/footer/footer

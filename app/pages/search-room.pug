@@ -1,13 +1,5 @@
-include ../blocks/ui-kit/room/room
-include ../blocks/ui-kit/dropdown/dropdown
-include ../blocks/ui-kit/range-slider/range-slider
-include ../blocks/ui-kit/filter-date-dropdown/filter-date-dropdown
-include ../blocks/ui-kit/checkbox-list/checkbox-list
-include ../blocks/ui-kit/checkbox-list-expandable/checkbox-list-expandable
-include ../blocks/ui-kit/rich-checkbox-list/rich-checkbox-list
-include ../blocks/ui-kit/buttons/buttons
+extends ../layout/base.pug
 
-include ../blocks/header/header
 block content 
   .search-room-page 
     .search-room-page__container.container 
@@ -27,30 +19,28 @@ block content
         h1.search-room-page__title Номера, которые мы для вас подобрали
         .search-room-page__items 
           .search-room-page__item
-            +room("888", "9 999", "5", "145", true)
+            +room("888", "9 999", "5", "145", "room.html", true)
           .search-room-page__item
-            +room("840", "9 999", "4", "65")
+            +room("840", "9 999", "4", "65", "room.html")
           .search-room-page__item
-            +room("980", "8 500", "3", "35", true)
+            +room("980", "8 500", "3", "35", "room.html", true)
           .search-room-page__item
-            +room("856", "7 300", "5", "19")
+            +room("856", "7 300", "5", "19", "room.html")
           .search-room-page__item
-            +room("740", "6 000", "4", "44")
+            +room("740", "6 000", "4", "44", "room.html")
           .search-room-page__item
-            +room("982", "5 800", "3", "56")
+            +room("982", "5 800", "3", "56", "room.html")
           .search-room-page__item
-            +room("678", "5 500", "5", "45")
+            +room("678", "5 500", "5", "45", "room.html")
           .search-room-page__item
-            +room("450", "5 300", "4", "39")
+            +room("450", "5 300", "4", "39", "room.html")
           .search-room-page__item
-            +room("350", "5 000", "3", "77")
+            +room("350", "5 000", "3", "77", "room.html")
           .search-room-page__item
-            +room("666", "5 000", "5", "25")
+            +room("666", "5 000", "5", "25", "room.html")
           .search-room-page__item
-            +room("444", "5 000", "3", "15")
+            +room("444", "5 000", "3", "15", "room.html")
           .search-room-page__item
-            +room("352", "5 000", "3", "55")
+            +room("352", "5 000", "3", "55", "room.html")
         .search-room-page__pagination    
           include ../blocks/ui-kit/pagination/pagination
-
-include ../blocks/footer/footer.pug

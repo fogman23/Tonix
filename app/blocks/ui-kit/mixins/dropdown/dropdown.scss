@@ -91,17 +91,19 @@
     &-title {
       font-size: 12px;
       line-height: 15px;
-      flex: 1 1;
+      flex: 1;
     }
     &-count {
       text-align: center;
       width: 32px;
     }
     button {
+      display: block;
       font-size: 18px;
-      line-height: 1;
-      width: 30px;
+      line-height: 18px;
       height: 30px;
+      width: 30px;
+      padding: 0;
       border-radius: 50%;
       border: 1px solid $dark50;
       background: #fff;

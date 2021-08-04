@@ -1,0 +1,10 @@
+mixin dateDropdown(from, to)
+  .date-dropdown
+    .date-dropdown__select 
+      .date-dropdown__label= from
+      .date-dropdown__input(data-action="start") ДД.ММ.ГГГГ
+    .date-dropdown__select
+      .date-dropdown__label= to
+      .date-dropdown__input(data-action="end") ДД.ММ.ГГГГ
+
+

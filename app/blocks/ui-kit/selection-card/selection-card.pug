@@ -1,8 +1,5 @@
-include ../date-dropdown/date-dropdown
-include ../dropdown/dropdown
-include ../buttons/buttons
 .selection-card
   h1.selection-card__title Найдём номера под ваши пожелания
-  +dateDropdown("прибытие", "выезд", "date-dropdown-3")
-  +dropdownPeople("гости", "people-3")
-  +btnBig("подобрать номер", true)
+  +dateDropdown("прибытие", "выезд")
+  +dropdownPeople("гости")
+  +btnBig("подобрать номер", "search-room.html", true)

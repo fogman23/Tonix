@@ -1,47 +1,100 @@
-.donut {
-  &-hole {
-    fill: #fff;
+figure {
+  display: flex;
+  @include media-breakpoint-down(xl) {
+    flex-direction: column;
   }
-  &-ring {
-    fill: transparent;
-    stroke: #fff;
-    stroke-width: 4px;
-  }
-  &-segment {
-    fill: transparent;
-    stroke-width: 4px;
-    &:nth-child(3) {
-      stroke-dasharray: 0 364;
-      stroke-dashoffset: 0;
+  .figure-content {
+    .donut {
+      &-hole {
+        fill: #fff;
+      }
+      &-ring {
+        fill: transparent;
+        stroke: #fff;
+        stroke-width: 4px;
+      }
+      &-segment {
+        fill: transparent;
+        stroke-width: 4px;
+        &:nth-child(3) {
+          stroke-dasharray: 0 364;
+          stroke-dashoffset: 0;
+        }
+        &:nth-child(4) {
+          stroke-dasharray: 91 273;
+          stroke-dashoffset: 91;
+        }
+        &:nth-child(5) {
+          stroke-dasharray: 91 273;
+          stroke-dashoffset: 0;
+        }
+        &:nth-child(6) {
+          stroke-dasharray: 182 182;
+          stroke-dashoffset: 273;
+        }
+        // &:nth-child(3) {
+        //   stroke-dasharray: 91 273;
+        //   stroke-dashoffset: 91;
+        // }
+        // &:nth-child(4) {
+        //   stroke-dasharray: 91 273;
+        //   stroke-dashoffset: 0;
+        // }
+        // &:nth-child(5) {
+        //   stroke-dasharray: 91 273;
+        //   stroke-dashoffset: 273;
+        // }
+        // &:nth-child(6) {
+        //   stroke-dasharray: 91 273;
+        //   stroke-dashoffset: 182;
+        // }
+      }
     }
-    &:nth-child(4) {
-      stroke-dasharray: 91 273;
-      stroke-dashoffset: 91;
+    .chart-text {
+      fill: $purple;
+      font-size: 24px;
+      line-height: 29px;
+      font-weight: 700;
     }
-    &:nth-child(5) {
-      stroke-dasharray: 91 273;
-      stroke-dashoffset: 0;
+    .chart-number {
+      text-anchor: middle;
     }
-    &:nth-child(6) {
-      stroke-dasharray: 182 182;
-      stroke-dashoffset: 273;
+    .chart-label {
+      font-size: 12px;
+      line-height: 15px;
+      text-anchor: middle;
+      text-transform: uppercase;
     }
   }
-
-  .chart-text {
-    fill: $purple;
-    font-size: 24px;
-    line-height: 29px;
-    font-weight: 700;
+  .figure-key {
+    &-list {
+      list-style-type: none;
+      padding-left: 30px;
+      margin: 30px 0 0 0;
+      min-width: 195px;
+      @include media-breakpoint-down(xl) {
+        padding-left: 0;
+      }
+      .shape-circle {
+        display: inline-block;
+        margin-right: 5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .circle-1 {
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      }
+      .circle-2 {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      }
+      .circle-3 {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      }
+      .circle-4 {
+        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+      }
+    }
   }
-  .chart-number {
-    text-anchor: middle;
-  }
-  .chart-label {
-    font-size: 12px;
-    line-height: 15px;
-    text-anchor: middle;
-    text-transform: uppercase;
-  }
-
+  
 }

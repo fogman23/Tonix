@@ -1,6 +1,9 @@
 .room-page {
   padding-top: 70px;
   border-bottom: 1px solid $dark25;
+  @include media-breakpoint-down(sm) {
+    padding-top: 134px;
+  }
   &__gallery {
     margin: 0 auto;
   }
@@ -8,11 +11,18 @@
     display: flex;
     justify-content: center;
     max-width: 1440px;
+    max-height: 485px;
+    height: 100%;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
     &__row {
       height: 50%;
     }
     &__column {
-      max-height: 485px;
+      @include media-breakpoint-down(sm) {
+        flex-basis: 100%;
+      }
       &_left {
         flex-basis: 68.125%;
         img {
@@ -37,15 +47,53 @@
     @include media-breakpoint-down(lg) {
       flex-wrap: wrap;
     }
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
     
   }
   &__content {
+    flex: 1 1 712px;
     padding-right: 70px;
+    @include media-breakpoint-down(xl) {
+      padding-right: 50px;
+    }
+    @include media-breakpoint-down(sm) {
+      flex: 1 1;
+      padding-right: 0;
+    }
+  }
+  &__sitebar {
+    @include media-breakpoint-down(lg) {
+      margin-top: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__column {
-    flex-basis: 50%;
-    &:not(:last-child) {
+    flex: 0 0 360px;
+    @include media-breakpoint-down(xl) {
+      flex: 0 0 330px;
+    }
+    @include media-breakpoint-down(sm) {
+      flex: 1;
+    }
+    &:first-child {
       padding-right: 70px;
+      @include media-breakpoint-down(xl) {
+        padding-right: 40px;
+      }
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+      }
+    }
+    &:last-child {
+      flex: 0 1 290px;
+      @include media-breakpoint-down(sm) {
+        margin-top: 30px;
+      }
     }
   }
   &__title {
@@ -54,7 +102,7 @@
   &__info, &__additions {
     display: flex;
     @include media-breakpoint-down(sm) {
-      flex-wrap: wrap;
+      display: block;
     }
   }
   &__reviews {
@@ -66,6 +114,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
   }
   &__item:not(:last-child) {
     margin-bottom: 20px;

@@ -7,10 +7,6 @@ const dropdown = () => {
 
   function initDropdowns() {
 
-    let sum = 0
-    let people = 0
-    let baby = 0
-
     for (let index = 0; index < dropdowns.length; index++) {
       const dropdown = dropdowns[index]
       initDropdown(dropdown)
@@ -71,7 +67,11 @@ const dropdown = () => {
       })
 
       function summa() {
-        sum = 0
+
+        let sum = 0
+        let people = 0
+        let baby = 0
+
         dropdownItemCount.forEach((item, i) => {
           if (Number(item.innerText) == 0) {
             dropdownItemBtnMinus[i].disabled = true
@@ -79,11 +79,12 @@ const dropdown = () => {
             dropdownItemBtnMinus[i].removeAttribute('disabled')
           }
           sum += Number(item.innerText)
-          if (i == 2) {
+          if (dropdownSelect.parentNode.classList.contains("dropdown-people") && i == 2) {
             people = sum - item.innerText
             baby = sum - people
           }
         })
+
         if (dropdownSelect.parentNode.classList.contains("dropdown-people")) {
           if (sum == 0) {
             dropdownClear.style.display = "none"

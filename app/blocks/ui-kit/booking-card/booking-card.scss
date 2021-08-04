@@ -7,9 +7,9 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px 30px 30px 30px;
+  padding: 40px 29.5px 30px 29.5px;
   @include media-breakpoint-down(sm) {
-    padding: 40px 15px 30px 15px;
+    padding: 40px 14.5px 30px 14.5px;
     width: 320px;
   }
   &__top {
@@ -60,6 +60,7 @@
       display: flex;
       justify-content: space-between;
       line-height: 18px;
+      min-height: 24px;
       &:not(:last-child) {
         margin-bottom: 10px;
       }

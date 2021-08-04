@@ -1,0 +1,13 @@
+.sign-in-page {
+  padding-top: 70px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 134px;
+  }
+  &__container {
+    background: url("../images/dist/landing2.jpg") no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 753px;
+  }
+}

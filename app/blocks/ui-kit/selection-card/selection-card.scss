@@ -2,12 +2,12 @@
   width: 380px;
   min-height: 374px;
   background-color: #fff;
-  padding: 40px 30px 30px 30px;
+  padding: 40px 29.5px 30px 29.5px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   @include media-breakpoint-down(sm) {
-    padding: 40px 15px 30px 15px;
+    padding: 40px 14.5px 30px 14.5px;
     width: 320px;
   }
   &__title {

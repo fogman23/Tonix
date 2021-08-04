@@ -1,8 +1,3 @@
-include ../text-field/text-field
-include ../radio/radio
-include ../toggle/toggle
-include ../buttons/buttons
-
 .registration-card 
   h1.registration-card__title Регистрация аккаунта
   form.form-registration 
@@ -14,8 +9,8 @@ include ../buttons/buttons
     +textField("данные для входа в сервис", "email", "Email")
     +textFieldNoLabel("password", "Пароль")
     +toggle("Получать спецпредложения", "specoffers")
-    +btnBig("Перейти к оплате", true)
+    +btnBig("зарегистрироваться", "account.html")
   .registration-card__bottom 
     span Уже есть аккаунт на Toxin
-    +btnSmallBorder("Войти")
+    +btnSmallBorder("Войти", "sign-in.html")
     

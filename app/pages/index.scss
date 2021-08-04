@@ -9,6 +9,11 @@
     height: 900px;
     @include media-breakpoint-down(sm) {
       padding-top: 210px;
+      display: flex;
+      justify-content: center;
+      .selection-card {
+        align-self: start;
+      }
     }
   }
   &__description {

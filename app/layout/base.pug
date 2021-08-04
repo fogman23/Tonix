@@ -1,0 +1,34 @@
+include ../blocks/ui-kit/mixins/text-field/text-field
+include ../blocks/ui-kit/mixins/dropdown/dropdown
+include ../blocks/ui-kit/mixins/date-dropdown/date-dropdown
+include ../blocks/ui-kit/mixins/filter-date-dropdown/filter-date-dropdown
+include ../blocks/ui-kit/mixins/subscription-text-field/subscription-text-field
+include ../blocks/ui-kit/mixins/checkbox/checkbox
+include ../blocks/ui-kit/mixins/radio/radio
+include ../blocks/ui-kit/mixins/toggle/toggle
+include ../blocks/ui-kit/mixins/like/like
+include ../blocks/ui-kit/mixins/range-slider/range-slider
+include ../blocks/ui-kit/mixins/buttons/buttons
+include ../blocks/ui-kit/mixins/checkbox-list/checkbox-list
+include ../blocks/ui-kit/mixins/checkbox-list-expandable/checkbox-list-expandable
+include ../blocks/ui-kit/mixins/rich-checkbox-list/rich-checkbox-list
+include ../blocks/ui-kit/mixins/bullet-list/bullet-list
+include ../blocks/ui-kit/mixins/option-info/option-info
+include ../blocks/ui-kit/mixins/review/review
+include ../blocks/ui-kit/mixins/rate/rate
+include ../blocks/ui-kit/mixins/room/room
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/main.min.css")
+    title Toxin
+  body
+    block header
+      include ../blocks/header/header.pug
+    block content
+    block footer
+      include ../blocks/footer/footer.pug

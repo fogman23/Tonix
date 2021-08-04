@@ -1,31 +1,21 @@
-include ../ui-kit/buttons/buttons
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/main.min.css")
-    title Toxin
-  body
-    header.header 
-      .header__container.container
-        a(href="#").header__logo
-          img(src="images/dist/logo.svg", alt="Logo")
-        include ../ui-kit/hamburger/hamburger
-        ul.header__menu.menu
-          li.menu__item
-            a(href="#").menu__link.menu__link_active О нас
-          li.menu__item.menu__item_dropdown
-            a(href="#").menu__link Услуги
-          li.menu__item
-            a(href="#").menu__link Вакансии
-          li.menu__item
-            a(href="#").menu__link Новости
-          li.menu__item.menu__item_dropdown
-            a(href="#").menu__link Соглашения
-        .header__services
-          +btnSmallBorder("Войти")
-          +btnBig("Зарегистрироваться") 
-
-    block content
+block header
+  header.header 
+    .header__container.container
+      a(href="index.html").header__logo
+        img(src="images/dist/logo.svg", alt="Logo")
+      include ../ui-kit/hamburger/hamburger
+      ul.header__menu.menu
+        li.menu__item
+          a(href="#").menu__link.menu__link_active О нас
+        li.menu__item.menu__item_dropdown
+          a(href="#").menu__link Услуги
+        li.menu__item
+          a(href="#").menu__link Вакансии
+        li.menu__item
+          a(href="#").menu__link Новости
+        li.menu__item.menu__item_dropdown
+          a(href="#").menu__link Соглашения
+      .header__services
+        +btnSmallBorder("Войти", "sign-in.html")
+        +btnSmall("Зарегистрироваться", "registration.html") 
+    

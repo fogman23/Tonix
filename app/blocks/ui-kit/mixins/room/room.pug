@@ -1,5 +1,5 @@
 include ../rate/rate
-mixin room(number, price, rate, review, luxe)
+mixin room(number, price, rate, review, href, luxe)
   .room 
     .room__slider.swiper-container
       .swiper-wrapper
@@ -16,7 +16,7 @@ mixin room(number, price, rate, review, luxe)
       .swiper-button-next.swiper-button-hidden
     .room__info 
       .room__top 
-        a(href="#").room__title <span>№ </span> #{number}
+        a(href=href).room__title <span>№ </span> #{number}
         if luxe
           span.room__luxe люкс
         .room__price #{price}₽ <span>в сутки</span>

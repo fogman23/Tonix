@@ -1,0 +1,18 @@
+- var disabled = false;
+
+mixin btnBig(title, href)
+  a(href=href).btn.btn_big
+    span= title
+    i.material-icons arrow_forward
+
+mixin btnSmall(title, href, disabled)
+  a(href=href, class=disabled ? "btn_small_disabled" : "").btn.btn_small= title
+
+mixin btnSmallBorder(title, href, disabled)
+  a(href=href, class=disabled ? "btn_border_disabled" : "").btn.btn_border= title
+
+mixin btnText(title, disabled)
+  button(disabled=disabled).btn.btn_text= title
+
+mixin btnFilter()
+  button.btn.btn_filter

@@ -1,6 +1,7 @@
-@import "../variables";
+@import "../../variables";
 
-button.btn {
+.btn {
+  display: inline-block;
   position: relative;
   font-size: 12px;
   line-height: 14px;
@@ -16,7 +17,7 @@ button.btn {
     height: 44px;
     border-radius: 22px;
     background: $purpleGradient;
-    &::before {
+    &:before {
       content: '\e429';
       font-family: "Material Icons";
       z-index: 25;
@@ -34,8 +35,15 @@ button.btn {
   &_big {
     width: 320px;
     height: 44px;
+    line-height: 44px;
     border-radius: 22px;
+    text-decoration: none;
     background: $purpleGradient;
+    transition: 0.5s ease;
+    &:hover, &:focus {
+      color: #fff;
+      background: $greenGradient;
+    }
   }
   i {
     position: absolute;
@@ -43,23 +51,37 @@ button.btn {
     right: 10px;
   }
   &_small {
-    width: 99px;
-    height: 44px;
+    padding: 14.5px 20px;
     border-radius: 22px;
+    text-decoration: none;
     background: $purpleGradient;
-    &:disabled {
+    transition: 0.5s ease;
+    &:hover, &:focus {
+      color: #fff;
+      background: $greenGradient;
+    }
+    &_disabled {
       opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
     }
   }
   &_border {
     position: relative;
     border: 2px solid transparent;
     border-radius: 22px;
-    width: 95px;
-    height: 40px;
+    padding: 11.5px 17px;
+    border-radius: 22px;
+    text-decoration: none;
     margin: 2px;
     color: $purple;
     background: #fff;
+    &:hover, &:focus {
+      color: $green;
+      &:before {
+        background: $greenGradient;
+      }
+    }
     &:before {
       content: '';
       z-index: -1;
@@ -71,8 +93,10 @@ button.btn {
       bottom: -4px;
       background: $purpleGradient;
     }
-    &:disabled {
+    &_disabled {
       opacity: 1;
+      pointer-events: none;
+      cursor: default;
       // color: rgba($purple, 0.5);
       &:before {
         opacity: 0.5;
@@ -84,6 +108,9 @@ button.btn {
     border: none;
     height: 15px;
     color: $purple;
+    &:hover, &:focus {
+      color: $green;
+    }
     &:disabled {
       color: $dark50;
     }

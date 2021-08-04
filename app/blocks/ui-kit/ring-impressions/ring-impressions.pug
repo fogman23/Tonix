@@ -1,45 +1,42 @@
 mixin ringImpressions()
-  .canvas 
-    <svg width="120" height="120" viewBox="0 0 120 120" class="donut">
-      
-      <g mask="url(#msk1)">
-        <circle class="donut-hole" cx="60" cy="60" r="58"></circle>
-        <circle class="donut-ring" cx="60" cy="60" r="58"></circle>
-        <circle class="donut-segment" cx="60" cy="60" r="58" stroke="url(#color1)"></circle>
-        <circle class="donut-segment" cx="60" cy="60" r="58" stroke="url(#color2)"></circle>
-        <circle class="donut-segment" cx="60" cy="60" r="58" stroke="url(#color3)"></circle>
-        <circle class="donut-segment" cx="60" cy="60" r="58" stroke="url(#color4)"></circle>
-      </g>
+  figure 
+    .figure-content
+      svg(width="120" height="120" viewBox="0 0 120 120").donut
+        g(mask="url(#msk1)")
+          circle.donut-hole(cx="60" cy="60" r="58")
+          circle.donut-ring(cx="60" cy="60" r="58")
+          circle.donut-segment(cx="60" cy="60" r="58" stroke="url(#color1)")
+          circle.donut-segment(cx="60" cy="60" r="58" stroke="url(#color2)")
+          circle.donut-segment(cx="60" cy="60" r="58" stroke="url(#color3)")
+          circle.donut-segment(cx="60" cy="60" r="58" stroke="url(#color4)")
+        g.chart-text
+          text(x="50%" y="59").chart-number 260
+          text(x="50%" y="77").chart-label голосов
+        defs
+          mask(id="msk1")
+            rect(width="100%" height="100%" fill="white")
+            polyline(points="60,0 60,120" fill="black" stroke="black" stroke-width="2")
+            polyline(points="120,60 60,60" fill="black" stroke="black" stroke-width="2")
+            //- polyline(points="0,60 120,60" fill="black" stroke="black" stroke-width="2")
+          linearGradient(id="color1" x1="5" y1="10" x2="5" y2="0" gradientUnits="userSpaceOnUse")
+            stop(stop-color="#919191")
+            stop(offset="1" stop-color="#3D4975")
+          linearGradient(id="color2" x1="5" y1="10" x2="5" y2="0" gradientUnits="userSpaceOnUse")
+            stop(stop-color="#BC9CFF")
+            stop(offset="1" stop-color="#8BA4F9")
+          linearGradient(id="color3" x1="5" y1="10" x2="5" y2="0" gradientUnits="userSpaceOnUse")
+            stop(stop-color="#6FCF97")
+            stop(offset="1" stop-color="#66D2EA")
+          linearGradient(id="color4" x1="5" y1="10" x2="5" y2="0" gradientUnits="userSpaceOnUse")
+            stop(stop-color="#FFE39C")
+            stop(offset="1" stop-color="#FFBA9C")
 
-      <g class="chart-text">
-        <text x="50%" y="59" class="chart-number">260</text>
-        <text x="50%" y="77" class="chart-label">голосов</text>
-      </g>
+    figcaption.figure-key
+      ul.figure-key-list
+        li #[span(class="shape-circle circle-1")]Великолепно
+        li #[span(class="shape-circle circle-2")]Хорошо
+        li #[span(class="shape-circle circle-3")]Удовлетворительно
+        li #[span(class="shape-circle circle-4")]Разочарование
 
-      <defs>
-        <mask id="msk1"> 
-          <rect width="100%" height="100%" fill="white"/>
-            <polyline points="60,0 60,120" fill="black" stroke="black" stroke-width="2"/>
-            <polyline points="120,60 60,60" fill="black" stroke="black" stroke-width="2"/>
-        </mask> 
-        <linearGradient id="color1" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#919191"/>
-          <stop offset="1" stop-color="#3D4975"/>
-        </linearGradient>
-        <linearGradient id="color2" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#BC9CFF"/>
-          <stop offset="1" stop-color="#8BA4F9"/>
-        </linearGradient>
-        <linearGradient id="color3" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#6FCF97"/>
-          <stop offset="1" stop-color="#66D2EA"/>
-        </linearGradient>
-        <linearGradient id="color4" x1="5" y1="0" x2="5" y2="10" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FFE39C"/>
-          <stop offset="1" stop-color="#FFBA9C"/>
-        </linearGradient>
-      </defs>
-
-    </svg>
 
 

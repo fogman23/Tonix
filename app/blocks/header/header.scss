@@ -95,18 +95,16 @@
     @include media-breakpoint-down(sm) {
       margin-left: 0;
     }
-    &_big {
-      height: 34px;
-      max-width: 196px;
+    &_border {
+      padding: 6px 16.5px;
       @include media-breakpoint-down(sm) {
-        height: 44px;
+        
       }
     }
     &_small {
-      width: 87px;
-      height: 30px;
+      padding: 10px 20px;
       @include media-breakpoint-down(sm) {
-        height: 40px;
+        
       }
     }
   }
