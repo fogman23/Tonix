@@ -1,10 +1,9 @@
-include ../like/like
-mixin review(foto, title, date, text, countLike)
+mixin review(foto, title, date, text, idLike, countLike, checkedLike)
   .review 
     .review__column 
       img(src= foto, alt="foto").review__foto
       .review__like 
-        +like("ff", countLike) 
+        +like(idLike, countLike, checkedLike) 
     .review__column
       .review__title= title 
       .review__date= date 

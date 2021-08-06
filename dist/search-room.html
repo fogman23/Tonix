@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Toxin</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container"><a class="header__logo" href="index.html"><img src="images/dist/logo.svg"
+          alt="Logo"></a>
+      <div class="hamburger"><span> </span><span> </span><span> </span></div>
+      <ul class="header__menu menu">
+        <li class="menu__item"><a class="menu__link menu__link_active" href="about.html">О нас</a></li>
+        <li class="menu__item menu__item_dropdown"><a class="menu__link" href="services.html">Услуги</a></li>
+        <li class="menu__item"><a class="menu__link" href="vacancies.html">Вакансии</a></li>
+        <li class="menu__item"><a class="menu__link" href="news.html">Новости</a></li>
+        <li class="menu__item menu__item_dropdown"><a class="menu__link" href="agreements.html">Соглашения</a></li>
+      </ul>
+      <div class="header__services"><a class="btn btn_border" href="sign-in.html">Войти</a><a class="btn btn_small"
+          href="registration.html">Зарегистрироваться</a></div>
+    </div>
+  </header>
+  <div class="search-room-page">
+    <div class="search-room-page__container container"> <button class="btn btn_filter"></button>
+      <div class="search-room-page__sidebar">
+        <div class="filter-date-dropdown">
+          <div class="filter-date-dropdown__label">даты пребывания в отеле</div>
+          <div class="filter-date-dropdown__input" data-action="date">Прибытие - Выезд</div>
+        </div>
+        <div class="dropdown dropdown-people">
+          <div class="dropdown__label">гости</div>
+          <div class="dropdown__select">сколько гостей</div>
+          <div class="dropdown__body">
+            <ul class="dropdown__list">
+              <li class="dropdown__item"> <span class="dropdown__item-title">взрослые</span><button
+                  class="btn-minus">-</button><span class="dropdown__item-count">0</span><button
+                  class="btn-plus">+</button></li>
+              <li class="dropdown__item"> <span class="dropdown__item-title">дети</span><button
+                  class="btn-minus">-</button><span class="dropdown__item-count">0</span><button
+                  class="btn-plus">+</button></li>
+              <li class="dropdown__item"> <span class="dropdown__item-title">младенцы</span><button
+                  class="btn-minus">-</button><span class="dropdown__item-count">0</span><button
+                  class="btn-plus">+</button></li>
+            </ul>
+            <div class="dropdown__buttons"> <button class="btn btn_text">Применить</button><button
+                class="btn btn_text">Очистить</button></div>
+          </div>
+        </div>
+        <div class="range-slider">
+          <div class="range-slider__top"> <span class="range-slider__label">диапазон цены</span><span
+              class="range-slider__value"> </span></div>
+          <div class="range-slider__input"></div>
+          <div class="range-slider__text">Стоимость за сутки пребывания в номере</div>
+        </div>
+        <div class="checkbox-list">
+          <div class="checkbox-list__title">правила дома</div>
+          <div class="checkbox-list__body">
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="smoke" /><label
+                class="checkbox__label" for="smoke">Можно курить</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="pets" /><label
+                class="checkbox__label" for="pets">Можно с питомцами</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="party" /><label
+                class="checkbox__label" for="party">Можно пригласить гостей (до 10 человек)</label></div>
+          </div>
+        </div>
+        <div class="rich-checkbox-list">
+          <div class="rich-checkbox-list__title">доступность</div>
+          <div class="rich-checkbox-list__body">
+            <div class="checkbox-rich"><input class="checkbox-rich__input" type="checkbox" id="ggg" /><label
+                class="checkbox-rich__label" for="ggg">Широкий коридор</label>
+              <div class="checkbox-rich__text">Ширина коридоров в номере не менее 91 см.</div>
+            </div>
+            <div class="checkbox-rich"><input class="checkbox-rich__input" type="checkbox" id="rrr" /><label
+                class="checkbox-rich__label" for="rrr">Помощник для инвалидов</label>
+              <div class="checkbox-rich__text">На 1 этаже вас встретит специалист и проводит до номера.</div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-rooms">
+          <div class="dropdown__label">удобства номера</div>
+          <div class="dropdown__select">2 спальни, 2 кровати...</div>
+          <div class="dropdown__body">
+            <ul class="dropdown__list">
+              <li class="dropdown__item"> <span class="dropdown__item-title">спальни</span><button
+                  class="btn-minus">-</button><span class="dropdown__item-count">2</span><button
+                  class="btn-plus">+</button></li>
+              <li class="dropdown__item"> <span class="dropdown__item-title">кровати</span><button
+                  class="btn-minus">-</button><span class="dropdown__item-count">2</span><button
+                  class="btn-plus">+</button></li>
+              <li class="dropdown__item"> <span class="dropdown__item-title">ванные комнаты</span><button
+                  class="btn-minus">-</button><span class="dropdown__item-count">0</span><button
+                  class="btn-plus">+</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="checkbox-list-expandable">
+          <div class="checkbox-list-expandable__title">дополнительные удобства</div>
+          <div class="checkbox-list-expandable__body">
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="breakfast" /><label
+                class="checkbox__label" for="breakfast">Завтрак</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="desk" /><label
+                class="checkbox__label" for="desk">Письменный стол</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="feeding-chair" /><label
+                class="checkbox__label" for="feeding-chair">Стул для кормления</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="crib" /><label
+                class="checkbox__label" for="crib">Кроватка</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="television" /><label
+                class="checkbox__label" for="television">Телевизор</label></div>
+            <div class="checkbox"><input class="checkbox__input" type="checkbox" id="shampoo" /><label
+                class="checkbox__label" for="shampoo">Шампунь</label></div>
+          </div>
+        </div>
+      </div>
+      <div class="search-room-page__content">
+        <h1 class="search-room-page__title">Номера, которые мы для вас подобрали</h1>
+        <div class="search-room-page__items">
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room1.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room2.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room3.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room4.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 888</a><span
+                    class="room__luxe">люкс</span>
+                  <div class="room__price">9 999₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">5</div>
+                  </div>
+                  <div class="room__review">145 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room2.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room3.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room4.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room5.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 840</a>
+                  <div class="room__price">9 999₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">4</div>
+                  </div>
+                  <div class="room__review">65 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room3.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room4.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room5.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room6.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 980</a><span
+                    class="room__luxe">люкс</span>
+                  <div class="room__price">8 500₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">3</div>
+                  </div>
+                  <div class="room__review">35 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room4.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room5.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room6.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room7.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 856</a>
+                  <div class="room__price">7 300₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">5</div>
+                  </div>
+                  <div class="room__review">19 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room5.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room6.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room7.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room8.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 740</a>
+                  <div class="room__price">6 000₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">4</div>
+                  </div>
+                  <div class="room__review">44 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room6.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room7.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room8.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room9.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 982</a>
+                  <div class="room__price">5 800₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">3</div>
+                  </div>
+                  <div class="room__review">56 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room7.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room8.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room9.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room10.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 678</a>
+                  <div class="room__price">5 500₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">5</div>
+                  </div>
+                  <div class="room__review">45 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room8.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room9.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room10.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room11.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 450</a>
+                  <div class="room__price">5 300₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">4</div>
+                  </div>
+                  <div class="room__review">39 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room9.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room10.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room11.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room12.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 350</a>
+                  <div class="room__price">5 000₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">3</div>
+                  </div>
+                  <div class="room__review">77 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room10.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room11.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room12.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room1.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 666</a>
+                  <div class="room__price">5 000₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">5</div>
+                  </div>
+                  <div class="room__review">25 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room11.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room12.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room1.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room2.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 444</a>
+                  <div class="room__price">5 000₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">3</div>
+                  </div>
+                  <div class="room__review">15 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-page__item">
+            <div class="room">
+              <div class="room__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room12.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room1.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room2.jpg" alt="room" /></div>
+                  <div class="swiper-slide"><img class="room__slide" src="images/dist/room3.jpg" alt="room" /></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-hidden"></div>
+                <div class="swiper-button-next swiper-button-hidden"></div>
+              </div>
+              <div class="room__info">
+                <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 352</a>
+                  <div class="room__price">5 000₽ <span>в сутки</span></div>
+                </div>
+                <div class="room__bottom">
+                  <div class="rate">
+                    <div class="rate__body">
+                      <div class="rate__active"> </div>
+                      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input
+                          class="rate__item" type="radio" value="2" /><input class="rate__item" type="radio"
+                          value="3" /><input class="rate__item" type="radio" value="4" /><input class="rate__item"
+                          type="radio" value="5" /></div>
+                    </div>
+                    <div class="rate__value">3</div>
+                  </div>
+                  <div class="room__review">55 <span>Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-room-page__pagination">
+          <nav class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item pagination__item_active"> <a class="pagination__link" href="#">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+              <li class="pagination__item"><span class="pagination__separator">...</span></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">15</a></li>
+              <li class="pagination__item pagination__next"><a class="pagination__link" href="#"><i
+                    class="material-icons">arrow_forward</i></a></li>
+            </ul>
+            <div class="pagination__info">1 – 12 из 100+ вариантов аренды</div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__container container">
+        <div class="footer__column"><a class="footer__logo" href="#"><img src="images/dist/logo.svg" alt="Logo"></a>
+          <div class="footer__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные
+            взгляды»</div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">Навигация</div>
+          <ul class="footer__menu menu">
+            <li class="menu__item"> <a class="menu__link" href="about.html">О нас</a></li>
+            <li class="menu__item"> <a class="menu__link" href="news.html">Новости</a></li>
+            <li class="menu__item"> <a class="menu__link" href="support.html">Служба поддержки</a></li>
+            <li class="menu__item"> <a class="menu__link" href="services">Услуги</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">О нас</div>
+          <ul class="footer__menu menu">
+            <li class="menu__item"> <a class="menu__link" href="about-service.html">О сервисе</a></li>
+            <li class="menu__item"> <a class="menu__link" href="team.html">Наша команда</a></li>
+            <li class="menu__item"> <a class="menu__link" href="vacancies.html">Вакансии</a></li>
+            <li class="menu__item"> <a class="menu__link" href="investors.html">Инвесторы</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">Служба поддержки</div>
+          <ul class="footer__menu menu">
+            <li class="menu__item"> <a class="menu__link" href="agreements.html">Соглашения</a></li>
+            <li class="menu__item"> <a class="menu__link" href="community.html">Сообщества</a></li>
+            <li class="menu__item"> <a class="menu__link" href="contact-us.html">Связь с нами</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">Подписка</div>
+          <div class="footer__description">Получайте специальные предложения и новости сервиса</div>
+          <div class="subscription-text-field"> <input class="subscription-text-field__input" type="text"
+              placeholder="Email" /><button
+              class="material-icons subscription-text-field__button">arrow_forward</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <div class="footer__description">Copyright © 2018 Toxin отель. Все права защищены.</div>
+      <div class="footer__social"><a class="footer__icon" href="https://twitter.com"><img src="images/dist/twitter.svg"
+            alt="twitter"></a><a class="footer__icon" href="https://www.facebook.com"><img
+            src="images/dist/facebook.svg" alt="facebook"></a><a class="footer__icon"
+          href="https://www.instagram.com"><img src="images/dist/instagram.svg" alt="instagram"></a></div>
+    </div>
+  </footer>
+  <script src="js/app.min.js"> </script>
+</body>
+
+</html>

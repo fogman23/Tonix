@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Toxin</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container container"><a class="header__logo" href="index.html"><img src="images/dist/logo.svg"
+          alt="Logo"></a>
+      <div class="hamburger"><span> </span><span> </span><span> </span></div>
+      <ul class="header__menu menu">
+        <li class="menu__item"><a class="menu__link menu__link_active" href="about.html">О нас</a></li>
+        <li class="menu__item menu__item_dropdown"><a class="menu__link" href="services.html">Услуги</a></li>
+        <li class="menu__item"><a class="menu__link" href="vacancies.html">Вакансии</a></li>
+        <li class="menu__item"><a class="menu__link" href="news.html">Новости</a></li>
+        <li class="menu__item menu__item_dropdown"><a class="menu__link" href="agreements.html">Соглашения</a></li>
+      </ul>
+      <div class="header__services"><a class="btn btn_border" href="sign-in.html">Войти</a><a class="btn btn_small"
+          href="registration.html">Зарегистрироваться</a></div>
+    </div>
+  </header>
+  <div class="registration-page">
+    <div class="registration-page__container">
+      <div class="registration-card">
+        <h1 class="registration-card__title">Регистрация аккаунта</h1>
+        <form class="form-registration">
+          <div class="text-field"> <input class="text-field__input" type="text" id="name" placeholder="Имя" /></div>
+          <div class="text-field"> <input class="text-field__input" type="text" id="surname" placeholder="Фамилия" />
+          </div>
+          <div class="radio"><input class="radio__input" type="radio" id="man" name="s" value="Мужчина" /><label
+              class="radio__label" for="man">Мужчина</label></div>
+          <div class="radio"><input class="radio__input" type="radio" id="women" name="s" value="Женщина" /><label
+              class="radio__label" for="women">Женщина</label></div>
+          <div class="text-field text-field_masked"> <label class="text-field__label" for="birthday">дата
+              рождения</label><input class="text-field__input" type="text" id="birthday" placeholder="ДД.ММ.ГГГГ" />
+          </div>
+          <div class="text-field"> <label class="text-field__label" for="email">данные для входа в сервис</label><input
+              class="text-field__input" type="text" id="email" placeholder="Email" /></div>
+          <div class="text-field"> <input class="text-field__input" type="text" id="password" placeholder="Пароль" />
+          </div>
+          <div class="toggle"><input class="toggle__input" type="checkbox" id="specoffers" /><label
+              class="toggle__label" for="specoffers">Получать спецпредложения</label></div><a class="btn btn_big"
+            href="account.html"><span>зарегистрироваться</span><i class="material-icons">arrow_forward</i></a>
+        </form>
+        <div class="registration-card__bottom"> <span>Уже есть аккаунт на Toxin</span><a class="btn btn_border"
+            href="sign-in.html">Войти</a></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__container container">
+        <div class="footer__column"><a class="footer__logo" href="#"><img src="images/dist/logo.svg" alt="Logo"></a>
+          <div class="footer__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные
+            взгляды»</div>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">Навигация</div>
+          <ul class="footer__menu menu">
+            <li class="menu__item"> <a class="menu__link" href="about.html">О нас</a></li>
+            <li class="menu__item"> <a class="menu__link" href="news.html">Новости</a></li>
+            <li class="menu__item"> <a class="menu__link" href="support.html">Служба поддержки</a></li>
+            <li class="menu__item"> <a class="menu__link" href="services">Услуги</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">О нас</div>
+          <ul class="footer__menu menu">
+            <li class="menu__item"> <a class="menu__link" href="about-service.html">О сервисе</a></li>
+            <li class="menu__item"> <a class="menu__link" href="team.html">Наша команда</a></li>
+            <li class="menu__item"> <a class="menu__link" href="vacancies.html">Вакансии</a></li>
+            <li class="menu__item"> <a class="menu__link" href="investors.html">Инвесторы</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">Служба поддержки</div>
+          <ul class="footer__menu menu">
+            <li class="menu__item"> <a class="menu__link" href="agreements.html">Соглашения</a></li>
+            <li class="menu__item"> <a class="menu__link" href="community.html">Сообщества</a></li>
+            <li class="menu__item"> <a class="menu__link" href="contact-us.html">Связь с нами</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <div class="footer__title">Подписка</div>
+          <div class="footer__description">Получайте специальные предложения и новости сервиса</div>
+          <div class="subscription-text-field"> <input class="subscription-text-field__input" type="text"
+              placeholder="Email" /><button
+              class="material-icons subscription-text-field__button">arrow_forward</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <div class="footer__description">Copyright © 2018 Toxin отель. Все права защищены.</div>
+      <div class="footer__social"><a class="footer__icon" href="https://twitter.com"><img src="images/dist/twitter.svg"
+            alt="twitter"></a><a class="footer__icon" href="https://www.facebook.com"><img
+            src="images/dist/facebook.svg" alt="facebook"></a><a class="footer__icon"
+          href="https://www.instagram.com"><img src="images/dist/instagram.svg" alt="instagram"></a></div>
+    </div>
+  </footer>
+  <script src="js/app.min.js"> </script>
+</body>
+
+</html>

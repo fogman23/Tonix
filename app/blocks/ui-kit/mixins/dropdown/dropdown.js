@@ -29,14 +29,14 @@ const dropdown = () => {
 
       dropdownItemBtnPlus.forEach((item, i) => {
         item.addEventListener("click", () => {
-          dropdownItemCount[i].innerHTML++
+          dropdownItemCount[i].innerText++
           summa()
         })
       })
 
       dropdownItemBtnMinus.forEach((item, i) => {
         item.addEventListener("click", () => {
-          dropdownItemCount[i].innerHTML--
+          dropdownItemCount[i].innerText--
           summa()
         })
       })
@@ -45,7 +45,7 @@ const dropdown = () => {
         dropdownClear.addEventListener("click", () => {
           dropdownItemCount.forEach(item => item.innerText = 0)
           summa()
-          dropdownClear.style.display = "none"
+          dropdownClear.hidden = true
         })
       }
 
@@ -87,18 +87,18 @@ const dropdown = () => {
 
         if (dropdownSelect.parentNode.classList.contains("dropdown-people")) {
           if (sum == 0) {
-            dropdownClear.style.display = "none"
-            dropdownSelect.innerHTML = "сколько гостей"
+            dropdownClear.hidden = true
+            dropdownSelect.innerText = "сколько гостей"
           } else {
-            dropdownSelect.innerHTML = people + " " + num_word(people, ['гость', 'гостя', 'гостей'])
-            dropdownSelect.innerHTML += baby == 0 ? "" : ", " + baby + " " + num_word(baby, ['младенец', 'младенца', 'младенцев'])
-            dropdownClear.style.display = "block"
+            dropdownSelect.innerText = people + " " + num_word(people, ['гость', 'гостя', 'гостей'])
+            dropdownSelect.innerText += baby == 0 ? "" : ", " + baby + " " + num_word(baby, ['младенец', 'младенца', 'младенцев'])
+            dropdownClear.hidden = false
           }
         } else {
           if (sum == 0) {
-            dropdownSelect.innerHTML = "выберите кол-во комнат"
+            dropdownSelect.innerText = "выберите кол-во комнат"
           } else {
-            dropdownSelect.innerHTML = dropdownItemCount[0].innerHTML + " " + num_word(dropdownItemCount[0].innerHTML, ['спальня', 'спальни', 'спальней']) + ", " + dropdownItemCount[1].innerHTML + " " + num_word(dropdownItemCount[1].innerHTML, ['кровать', 'кровати', 'кроватей']) + ", " + dropdownItemCount[2].innerHTML + " " + num_word(dropdownItemCount[2].innerHTML, ['ванная комната', 'ванные комнаты', 'ванных комнат'])
+            dropdownSelect.innerText = dropdownItemCount[0].innerText + " " + num_word(dropdownItemCount[0].innerText, ['спальня', 'спальни', 'спальней']) + ", " + dropdownItemCount[1].innerText + " " + num_word(dropdownItemCount[1].innerText, ['кровать', 'кровати', 'кроватей']) + ", " + dropdownItemCount[2].innerText + " " + num_word(dropdownItemCount[2].innerText, ['ванная комната', 'ванные комнаты', 'ванных комнат'])
           }
         }
       }

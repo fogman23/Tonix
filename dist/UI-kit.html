@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.min.css">
+  <title>Toxin</title>
+</head>
+
+<body></body>
+
+</html>
+<header class="header">
+  <div class="header__container container"><a class="header__logo" href="index.html"><img src="images/dist/logo.svg"
+        alt="Logo"></a>
+    <div class="hamburger"><span> </span><span> </span><span> </span></div>
+    <ul class="header__menu menu">
+      <li class="menu__item"><a class="menu__link menu__link_active" href="about.html">О нас</a></li>
+      <li class="menu__item menu__item_dropdown"><a class="menu__link" href="services.html">Услуги</a></li>
+      <li class="menu__item"><a class="menu__link" href="vacancies.html">Вакансии</a></li>
+      <li class="menu__item"><a class="menu__link" href="news.html">Новости</a></li>
+      <li class="menu__item menu__item_dropdown"><a class="menu__link" href="agreements.html">Соглашения</a></li>
+    </ul>
+    <div class="header__services"><a class="btn btn_border" href="sign-in.html">Войти</a><a class="btn btn_small"
+        href="registration.html">Зарегистрироваться</a></div>
+  </div>
+</header>
+<div class="container"><br>
+  <h2>Colors & Type</h2><br>
+  <h1>H1 This one is the sub-section or widget title</h1>
+  <h2>H2 Next one is the item title inside widgets</h2>
+  <h3>H3 This is a label or CTA text</h3>
+  <p>BODY Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nam temporibus perferendis animi
+    dignissimos vitae eius sapiente at. Odit nesciunt rerum dolores culpa! Aut modi delectus corporis a maiores!</p><br>
+  <h2>Form Elements </h2><br>
+  <div class="text-field"> <label class="text-field__label" for="name">text field</label><input
+      class="text-field__input" type="text" id="name" placeholder="Name" /></div><br><br>
+  <div class="dropdown dropdown-people">
+    <div class="dropdown__label">dropdown</div>
+    <div class="dropdown__select">сколько гостей</div>
+    <div class="dropdown__body">
+      <ul class="dropdown__list">
+        <li class="dropdown__item"> <span class="dropdown__item-title">взрослые</span><button
+            class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+        </li>
+        <li class="dropdown__item"> <span class="dropdown__item-title">дети</span><button
+            class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+        </li>
+        <li class="dropdown__item"> <span class="dropdown__item-title">младенцы</span><button
+            class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+        </li>
+      </ul>
+      <div class="dropdown__buttons"> <button class="btn btn_text">Применить</button><button
+          class="btn btn_text">Очистить</button></div>
+    </div>
+  </div><br><br>
+  <div class="text-field text-field_masked"> <label class="text-field__label" for="birthday">masked text
+      field</label><input class="text-field__input" type="text" id="birthday" placeholder="ДД.ММ.ГГГГ" /></div><br><br>
+  <div class="date-dropdown">
+    <div class="date-dropdown__select">
+      <div class="date-dropdown__label">date dropdown</div>
+      <div class="date-dropdown__input" data-action="start">ДД.ММ.ГГГГ</div>
+    </div>
+    <div class="date-dropdown__select">
+      <div class="date-dropdown__label">date dropdown</div>
+      <div class="date-dropdown__input" data-action="end">ДД.ММ.ГГГГ</div>
+    </div>
+  </div><br><br>
+  <div class="filter-date-dropdown">
+    <div class="filter-date-dropdown__label">filter date dropdown</div>
+    <div class="filter-date-dropdown__input" data-action="date">Прибытие - Выезд</div>
+  </div><br><br>
+  <div class="subscription-text-field"> <input class="subscription-text-field__input" type="text"
+      placeholder="Email" /><button class="material-icons subscription-text-field__button">arrow_forward</button></div>
+  <br><br>
+  <div class="dropdown dropdown-rooms">
+    <div class="dropdown__label">dropdown</div>
+    <div class="dropdown__select">2 спальни, 2 кровати...</div>
+    <div class="dropdown__body">
+      <ul class="dropdown__list">
+        <li class="dropdown__item"> <span class="dropdown__item-title">спальни</span><button
+            class="btn-minus">-</button><span class="dropdown__item-count">2</span><button class="btn-plus">+</button>
+        </li>
+        <li class="dropdown__item"> <span class="dropdown__item-title">кровати</span><button
+            class="btn-minus">-</button><span class="dropdown__item-count">2</span><button class="btn-plus">+</button>
+        </li>
+        <li class="dropdown__item"> <span class="dropdown__item-title">ванные комнаты</span><button
+            class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+        </li>
+      </ul>
+    </div>
+  </div><br><br>
+  <div class="checkbox-list">
+    <div class="checkbox-list__title">checkbox buttons</div>
+    <div class="checkbox-list__body">
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="smoke" /><label class="checkbox__label"
+          for="smoke">Можно курить</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="pets" /><label class="checkbox__label"
+          for="pets">Можно с питомцами</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="party" /><label class="checkbox__label"
+          for="party">Можно пригласить гостей (до 10 человек)</label></div>
+    </div>
+  </div><br><br>
+  <div class="checkbox-list-expandable">
+    <div class="checkbox-list-expandable__title">expandable checkbox list</div>
+    <div class="checkbox-list-expandable__body">
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="breakfast" /><label
+          class="checkbox__label" for="breakfast">Завтрак</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="desk" /><label class="checkbox__label"
+          for="desk">Письменный стол</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="feeding-chair" /><label
+          class="checkbox__label" for="feeding-chair">Стул для кормления</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="crib" /><label class="checkbox__label"
+          for="crib">Кроватка</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="television" /><label
+          class="checkbox__label" for="television">Телевизор</label></div>
+      <div class="checkbox"><input class="checkbox__input" type="checkbox" id="shampoo" /><label class="checkbox__label"
+          for="shampoo">Шампунь</label></div>
+    </div>
+  </div><br>
+  <h3>ratio buttons</h3><br>
+  <div class="radio"><input class="radio__input" type="radio" id="m" name="radio" value="r1" /><label
+      class="radio__label" for="m">Мужчина</label></div>
+  <div class="radio"><input class="radio__input" type="radio" id="w" name="radio" value="r2" /><label
+      class="radio__label" for="w">Женщина</label></div><br><br>
+  <h3>toggle </h3><br>
+  <div class="toggle"><input class="toggle__input" type="checkbox" id="bonus" /><label class="toggle__label"
+      for="bonus">Получить спецпедложение</label></div><br>
+  <h3>like button</h3><br>
+  <div class="like"><input class="like__input" type="checkbox" id="like" /><label class="like__label"
+      for="like">12</label></div><br><br>
+  <h3>rate button</h3>
+  <div class="rate">
+    <div class="rate__body">
+      <div class="rate__active"> </div>
+      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input class="rate__item"
+          type="radio" value="2" /><input class="rate__item" type="radio" value="3" /><input class="rate__item"
+          type="radio" value="4" /><input class="rate__item" type="radio" value="5" /></div>
+    </div>
+    <div class="rate__value">4</div>
+  </div><br>
+  <div class="rate">
+    <div class="rate__body">
+      <div class="rate__active"> </div>
+      <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input class="rate__item"
+          type="radio" value="2" /><input class="rate__item" type="radio" value="3" /><input class="rate__item"
+          type="radio" value="4" /><input class="rate__item" type="radio" value="5" /></div>
+    </div>
+    <div class="rate__value">5</div>
+  </div><br><br>
+  <div class="range-slider">
+    <div class="range-slider__top"> <span class="range-slider__label">Range Slider</span><span
+        class="range-slider__value"> </span></div>
+    <div class="range-slider__input"></div>
+    <div class="range-slider__text">rangePrice</div>
+  </div><br>
+  <h3>buttons</h3><br><a class="btn btn_small" href="">Click me</a><a class="btn_small_disabled btn btn_small"
+    href="">Click me</a><br><br><a class="btn btn_border" href="">Click me</a><a
+    class="btn_border_disabled btn btn_border" href="">Click me</a><br><br><button class="btn btn_text">Click
+    me</button><button class="btn btn_text" disabled="disabled">Click me</button><br><br><a class="btn btn_big"
+    href=""><span>Перейти к оплате</span><i class="material-icons">arrow_forward</i></a><br><br>
+  <h3>pagination</h3><br>
+  <nav class="pagination">
+    <ul class="pagination__list">
+      <li class="pagination__item pagination__item_active"> <a class="pagination__link" href="#">1</a></li>
+      <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+      <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+      <li class="pagination__item"><span class="pagination__separator">...</span></li>
+      <li class="pagination__item"><a class="pagination__link" href="#">15</a></li>
+      <li class="pagination__item pagination__next"><a class="pagination__link" href="#"><i
+            class="material-icons">arrow_forward</i></a></li>
+    </ul>
+    <div class="pagination__info">1 – 12 из 100+ вариантов аренды</div>
+  </nav><br><br>
+  <div class="rich-checkbox-list">
+    <div class="rich-checkbox-list__title">rich Checkbox Buttons</div>
+    <div class="rich-checkbox-list__body">
+      <div class="checkbox-rich"><input class="checkbox-rich__input" type="checkbox" id="ggg" /><label
+          class="checkbox-rich__label" for="ggg">Широкий коридор</label>
+        <div class="checkbox-rich__text">Ширина коридоров в номере не менее 91 см.</div>
+      </div>
+      <div class="checkbox-rich"><input class="checkbox-rich__input" type="checkbox" id="rrr" /><label
+          class="checkbox-rich__label" for="rrr">Помощник для инвалидов</label>
+        <div class="checkbox-rich__text">На 1 этаже вас встретит специалист и проводит до номера.</div>
+      </div>
+    </div>
+  </div><br><br>
+  <h3>bullet list</h3>
+  <div class="bullet-list">
+    <ul class="bullet-list__list">
+      <li class="bullet-list__item">Нельзя с питомцами</li>
+      <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+      <li class="bullet-list__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+    </ul>
+  </div><br><br>
+  <div class="div">
+    <div class="option-info">
+      <div class="option-info__icon material-icons">insert_emoticon</div>
+      <div class="option-info__body">
+        <div class="option-info__title">Комфорт</div>
+        <div class="option-info__description">Шумопоглощающие стены</div>
+      </div>
+    </div>
+    <div class="option-info">
+      <div class="option-info__icon material-icons">location_city</div>
+      <div class="option-info__body">
+        <div class="option-info__title">Удобство</div>
+        <div class="option-info__description">Окно в каждой из спален</div>
+      </div>
+    </div>
+    <div class="option-info">
+      <div class="option-info__icon material-icons">whatshot</div>
+      <div class="option-info__body">
+        <div class="option-info__title">Уют</div>
+        <div class="option-info__description">Номер оснащён камином</div>
+      </div>
+    </div>
+  </div><br><br>
+  <div class="review">
+    <div class="review__column"> <img class="review__foto" src="images/dist/review.jpg" alt="foto" />
+      <div class="review__like">
+        <div class="like"><input class="like__input" type="checkbox" id="12" /><label class="like__label"
+            for="12"></label></div>
+      </div>
+    </div>
+    <div class="review__column">
+      <div class="review__title">Мурад Сарафанов</div>
+      <div class="review__date">5 дней назад</div>
+      <div class="review__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены,
+        действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
+    </div>
+  </div><br>
+  <h2>Cards</h2><br>
+  <div class="selection-card">
+    <h1 class="selection-card__title">Найдём номера под ваши пожелания</h1>
+    <div class="date-dropdown">
+      <div class="date-dropdown__select">
+        <div class="date-dropdown__label">прибытие</div>
+        <div class="date-dropdown__input" data-action="start">ДД.ММ.ГГГГ</div>
+      </div>
+      <div class="date-dropdown__select">
+        <div class="date-dropdown__label">выезд</div>
+        <div class="date-dropdown__input" data-action="end">ДД.ММ.ГГГГ</div>
+      </div>
+    </div>
+    <div class="dropdown dropdown-people">
+      <div class="dropdown__label">гости</div>
+      <div class="dropdown__select">сколько гостей</div>
+      <div class="dropdown__body">
+        <ul class="dropdown__list">
+          <li class="dropdown__item"> <span class="dropdown__item-title">взрослые</span><button
+              class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+          </li>
+          <li class="dropdown__item"> <span class="dropdown__item-title">дети</span><button
+              class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+          </li>
+          <li class="dropdown__item"> <span class="dropdown__item-title">младенцы</span><button
+              class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+          </li>
+        </ul>
+        <div class="dropdown__buttons"> <button class="btn btn_text">Применить</button><button
+            class="btn btn_text">Очистить</button></div>
+      </div>
+    </div><a class="btn btn_big" href="search-room.html"><span>подобрать номер</span><i
+        class="material-icons">arrow_forward</i></a>
+  </div><br>
+  <div class="booking-card">
+    <div class="booking-card__top"> <span class="booking-card__title"><span>№ </span>888</span><span
+        class="booking-card__class">Люкс</span><span class="booking-card__price">9 990₽ <span>в сутки</span></span>
+    </div>
+    <div class="date-dropdown">
+      <div class="date-dropdown__select">
+        <div class="date-dropdown__label">прибытие</div>
+        <div class="date-dropdown__input" data-action="start">ДД.ММ.ГГГГ</div>
+      </div>
+      <div class="date-dropdown__select">
+        <div class="date-dropdown__label">выезд</div>
+        <div class="date-dropdown__input" data-action="end">ДД.ММ.ГГГГ</div>
+      </div>
+    </div>
+    <div class="dropdown dropdown-people">
+      <div class="dropdown__label">гости</div>
+      <div class="dropdown__select">сколько гостей</div>
+      <div class="dropdown__body">
+        <ul class="dropdown__list">
+          <li class="dropdown__item"> <span class="dropdown__item-title">взрослые</span><button
+              class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+          </li>
+          <li class="dropdown__item"> <span class="dropdown__item-title">дети</span><button
+              class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+          </li>
+          <li class="dropdown__item"> <span class="dropdown__item-title">младенцы</span><button
+              class="btn-minus">-</button><span class="dropdown__item-count">0</span><button class="btn-plus">+</button>
+          </li>
+        </ul>
+        <div class="dropdown__buttons"> <button class="btn btn_text">Применить</button><button
+            class="btn btn_text">Очистить</button></div>
+      </div>
+    </div>
+    <div class="booking-card__list-services">
+      <div class="services-item"><span class="services-item__title">9 990₽ х 4 суток</span><span
+          class="services-item__price">39 960₽</span></div>
+      <div class="services-item"><span class="services-item__title">Сбор за услуги: скидка 2 179₽</span>
+        <div class="services-item__info">i</div><span class="services-item__price">0₽</span>
+      </div>
+      <div class="services-item"><span class="services-item__title">Сбор за дополнительные услуги</span>
+        <div class="services-item__info">i</div><span class="services-item__price">300₽</span>
+      </div>
+    </div>
+    <div class="booking-card__total total"> <span class="total__title">Итого</span><span class="total__price">111
+        111₽</span></div><a class="btn btn_big" href="order.html"><span>забронировать</span><i
+        class="material-icons">arrow_forward</i></a>
+  </div><br>
+  <div class="registration-card">
+    <h1 class="registration-card__title">Регистрация аккаунта</h1>
+    <form class="form-registration">
+      <div class="text-field"> <input class="text-field__input" type="text" id="name" placeholder="Имя" /></div>
+      <div class="text-field"> <input class="text-field__input" type="text" id="surname" placeholder="Фамилия" /></div>
+      <div class="radio"><input class="radio__input" type="radio" id="man" name="s" value="Мужчина" /><label
+          class="radio__label" for="man">Мужчина</label></div>
+      <div class="radio"><input class="radio__input" type="radio" id="women" name="s" value="Женщина" /><label
+          class="radio__label" for="women">Женщина</label></div>
+      <div class="text-field text-field_masked"> <label class="text-field__label" for="birthday">дата
+          рождения</label><input class="text-field__input" type="text" id="birthday" placeholder="ДД.ММ.ГГГГ" /></div>
+      <div class="text-field"> <label class="text-field__label" for="email">данные для входа в сервис</label><input
+          class="text-field__input" type="text" id="email" placeholder="Email" /></div>
+      <div class="text-field"> <input class="text-field__input" type="text" id="password" placeholder="Пароль" /></div>
+      <div class="toggle"><input class="toggle__input" type="checkbox" id="specoffers" /><label class="toggle__label"
+          for="specoffers">Получать спецпредложения</label></div><a class="btn btn_big"
+        href="account.html"><span>зарегистрироваться</span><i class="material-icons">arrow_forward</i></a>
+    </form>
+    <div class="registration-card__bottom"> <span>Уже есть аккаунт на Toxin</span><a class="btn btn_border"
+        href="sign-in.html">Войти</a></div>
+  </div><br>
+  <div class="signin-card">
+    <h1 class="signin-card__title">Войти</h1>
+    <form class="signin-form">
+      <div class="text-field"> <input class="text-field__input" type="text" id="email" placeholder="Email" /></div>
+      <div class="text-field"> <input class="text-field__input" type="text" id="password" placeholder="Пароль" /></div>
+      <a class="btn btn_big" href="account.html"><span>Войти</span><i class="material-icons">arrow_forward</i></a>
+    </form>
+    <div class="signin-card__bottom"> <span>Нет аккаунта на Toxin?</span><a class="btn btn_border"
+        href="registration.html">Создать</a></div>
+  </div><br>
+  <div class="room">
+    <div class="room__slider swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room1.jpg" alt="room" /></div>
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room2.jpg" alt="room" /></div>
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room3.jpg" alt="room" /></div>
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room4.jpg" alt="room" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev swiper-button-hidden"></div>
+      <div class="swiper-button-next swiper-button-hidden"></div>
+    </div>
+    <div class="room__info">
+      <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 888</a><span
+          class="room__luxe">люкс</span>
+        <div class="room__price">9 999₽ <span>в сутки</span></div>
+      </div>
+      <div class="room__bottom">
+        <div class="rate">
+          <div class="rate__body">
+            <div class="rate__active"> </div>
+            <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input class="rate__item"
+                type="radio" value="2" /><input class="rate__item" type="radio" value="3" /><input class="rate__item"
+                type="radio" value="4" /><input class="rate__item" type="radio" value="5" /></div>
+          </div>
+          <div class="rate__value">5</div>
+        </div>
+        <div class="room__review">145 <span>Отзывов</span></div>
+      </div>
+    </div>
+  </div><br>
+  <div class="room">
+    <div class="room__slider swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room4.jpg" alt="room" /></div>
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room3.jpg" alt="room" /></div>
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room2.jpg" alt="room" /></div>
+        <div class="swiper-slide"><img class="room__slide" src="images/dist/room1.jpg" alt="room" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev swiper-button-hidden"></div>
+      <div class="swiper-button-next swiper-button-hidden"></div>
+    </div>
+    <div class="room__info">
+      <div class="room__top"> <a class="room__title" href="room.html"><span>№ </span> 840</a>
+        <div class="room__price">9 999₽ <span>в сутки</span></div>
+      </div>
+      <div class="room__bottom">
+        <div class="rate">
+          <div class="rate__body">
+            <div class="rate__active"> </div>
+            <div class="rate__items"> <input class="rate__item" type="radio" value="1" /><input class="rate__item"
+                type="radio" value="2" /><input class="rate__item" type="radio" value="3" /><input class="rate__item"
+                type="radio" value="4" /><input class="rate__item" type="radio" value="5" /></div>
+          </div>
+          <div class="rate__value">4</div>
+        </div>
+        <div class="room__review">65 <span>Отзывов</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__container container">
+      <div class="footer__column"><a class="footer__logo" href="#"><img src="images/dist/logo.svg" alt="Logo"></a>
+        <div class="footer__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные
+          взгляды»</div>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">Навигация</div>
+        <ul class="footer__menu menu">
+          <li class="menu__item"> <a class="menu__link" href="about.html">О нас</a></li>
+          <li class="menu__item"> <a class="menu__link" href="news.html">Новости</a></li>
+          <li class="menu__item"> <a class="menu__link" href="support.html">Служба поддержки</a></li>
+          <li class="menu__item"> <a class="menu__link" href="services">Услуги</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">О нас</div>
+        <ul class="footer__menu menu">
+          <li class="menu__item"> <a class="menu__link" href="about-service.html">О сервисе</a></li>
+          <li class="menu__item"> <a class="menu__link" href="team.html">Наша команда</a></li>
+          <li class="menu__item"> <a class="menu__link" href="vacancies.html">Вакансии</a></li>
+          <li class="menu__item"> <a class="menu__link" href="investors.html">Инвесторы</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">Служба поддержки</div>
+        <ul class="footer__menu menu">
+          <li class="menu__item"> <a class="menu__link" href="agreements.html">Соглашения</a></li>
+          <li class="menu__item"> <a class="menu__link" href="community.html">Сообщества</a></li>
+          <li class="menu__item"> <a class="menu__link" href="contact-us.html">Связь с нами</a></li>
+        </ul>
+      </div>
+      <div class="footer__column">
+        <div class="footer__title">Подписка</div>
+        <div class="footer__description">Получайте специальные предложения и новости сервиса</div>
+        <div class="subscription-text-field"> <input class="subscription-text-field__input" type="text"
+            placeholder="Email" /><button class="material-icons subscription-text-field__button">arrow_forward</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom container">
+    <div class="footer__description">Copyright © 2018 Toxin отель. Все права защищены.</div>
+    <div class="footer__social"><a class="footer__icon" href="https://twitter.com"><img src="images/dist/twitter.svg"
+          alt="twitter"></a><a class="footer__icon" href="https://www.facebook.com"><img src="images/dist/facebook.svg"
+          alt="facebook"></a><a class="footer__icon" href="https://www.instagram.com"><img
+          src="images/dist/instagram.svg" alt="instagram"></a></div>
+  </div>
+</footer>
+<script src="js/app.min.js"> </script>
